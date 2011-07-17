@@ -14,12 +14,5 @@ function linkFile {
 
 for i in _*
 do
-    if [ "$i" == "_config" ]; then
-        for j in $i/*
-        do
-            linkFile "$j" "$j"
-        done
-    else
-        linkFile $i
-    fi
+  linkFile $i
 done

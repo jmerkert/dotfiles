@@ -17,7 +17,7 @@
 
 [github]
   user  = Weltraumschaf
-  token = xxx
+  token = 46842456237abd206a1254ddbb4d94fb
 
 [merge]
   tool = opendiff
