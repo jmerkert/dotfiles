@@ -6,10 +6,71 @@
 [ -z "$PS1" ] && return
 
 # enable 256 colors in terminal (useful for vim colorschemes)
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+if [ -e /usr/share/terminfo/x/xterm-256color ] ; then
 	export TERM='xterm-256color'
 else
 	export TERM='xterm-color'
+fi
+
+if [ -f "$HOME/.config/golang" ] ; then
+  . "$HOME/.config/golang"
+fi
+
+if [ -f "$HOME/.config/perl" ] ; then
+  . "$HOME/.config/perl"
+fi
+
+# GNU core utils
+if [ -d /opt/local/libexec/gnubin ] ; then
+  PATH="/opt/local/libexec/gnubin:$PATH"
+fi
+
+# macport stuff
+if [ -d /opt/local/bin ] && [ -d /opt/local/sbin ] ; then
+  PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+  
+  if [ -d /opt/local/lib/qt3 ] ; then
+    export QTDIR=/opt/local/lib/qt3
+  fi
+  
+  if [ -d /opt/local/share/man ] ; then
+    export MANPATH="/opt/local/share/man:$MANPATH"
+  fi
+fi
+
+# mysql binaries
+if [ -d /usr/local/mysql/bin ] ; then
+  PATH="/usr/local/mysql/bin:$PATH"
+fi
+
+# cabal installation
+if [ -d "$HOME/.cabal/bin" ] ; then
+  PATH="$HOME/.cabal/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+export PATH
+
+if [ -d /Library/Java/Home ] ; then
+  export JAVA_HOME=/Library/Java/Home
+fi
+
+if [ -d /opt/local/share/java/grails ] ; then
+  export GRAILS_HOME=/opt/local/share/java/grails
+fi
+
+if [ -d "$HOME/Applications/UMLet" ] ; then
+  export UMLET_HOME="$HOME/Applications/UMLet"
+fi
+
+export MAVEN_OPTS="-Xmx512m"
+
+if [ -d /usr/share/maven ] ; then
+  export M2_HOME=/usr/share/maven
 fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -35,11 +96,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -62,7 +118,6 @@ parse_git_branch() {
 
 if [ "$color_prompt" = yes ]; then
   PS1='\u@\h \w \[\033[90m\]$(parse_git_branch)\[\033[37m\]$\[\033[00m\] '
-  PS1='\u@\h \w $(parse_git_branch) '
 else
 	PS1='\u@\h \w $(parse_git_branch) '
 fi
@@ -99,15 +154,14 @@ export LANG="en_US.UTF-8"
 # Set to 'C' to make ls sort dotfiles
 export LC_COLLATE=C
 export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
-
-export GREP_OPTIONS='--color=always'
 
 # for `ls` (GNU coreutils, homebrew)
 # port install coreutils +with_default_names
-if [ "$TERM" != "dumb" ]; then
+if [ "$TERM" != "dumb" ] ; then
 	export LS_OPTIONS='--color=auto --file-type'
-	eval `dircolors $HOME/.dir_colors`
+  export LSCOLORS=gxfxcxdxbxegedabagacad
+  export GREP_OPTIONS='--color=always'
+  eval `dircolors "$HOME/.dir_colors"`
 fi
 
 # Set the right editor
@@ -126,8 +180,8 @@ fi
 export CONCURRENCY_LEVEL
 
 # Source additional information, which applies to the current host only
-if [ -f ~/.bash_local ]; then
-	. ~/.bash_local
+if [ -f "$HOME/.bash_local" ]; then
+	. "$HOME/.bash_local"
 fi
 
 # Export some debian stuff
