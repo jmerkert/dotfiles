@@ -1,4 +1,4 @@
-vbell on
+vbell off
 
 # Automatically detach on hangup
 autodetach on
@@ -11,7 +11,7 @@ defscrollback 5000
 
 
 # Set 256 color xterm inside screen
-#term xterm-256color
+term xterm-256color
 
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %Y-%m-%d %{W}%c %{g}]'
