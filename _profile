@@ -16,14 +16,26 @@ if [ -n "$BASH_VERSION" ] ; then
   fi
 fi
 
+if [ -f "$HOME/.config/golang" ] ; then
+  "$HOME/.config/golang"
+fi
+
 # GNU core utils
-if [ -d "/opt/local/libexec/gnubin" ] ; then
+if [ -d /opt/local/libexec/gnubin ] ; then
   PATH="/opt/local/libexec/gnubin/:$PATH"
 fi
 
-# macport binaries
-if [ -d "/opt/local/bin" && -d "/opt/local/sbin" ] ; then
+# macport stuff
+if [ -d /opt/local/bin && -d /opt/local/sbin ] ; then
   PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+  
+  if [ -d /opt/local/lib/qt3 ] ; then
+    export QTDIR=/opt/local/lib/qt3
+  fi
+  
+  if [ -d /opt/local/share/man ] ; then
+    export MANPATH="/opt/local/share/man:$MANPATH"
+  fi
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -32,7 +44,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # mysql binaries
-if [ -d "/usr/local/mysql/bin" ] ; then
+if [ -d /usr/local/mysql/bin ] ; then
   PATH="/usr/local/mysql/bin:$PATH"
 fi
 
@@ -48,6 +60,20 @@ fi
 
 export PATH
 
-if [ -d "/opt/local/share/man" ] ; then
-  export MANPATH="/opt/local/share/man:$MANPATH"
+if [ -d /Library/Java/Home ] ; then
+  export JAVA_HOME=/Library/Java/Home
+fi
+
+if [ -d /opt/local/share/java/grails ] ; then
+  export GRAILS_HOME=/opt/local/share/java/grails
+fi
+
+if [ -d "$HOME/Applications/UMLet" ] ; then
+  export UMLET_HOME="$HOME/Applications/UMLet"
+fi
+
+export MAVEN_OPTS="-Xmx512m"
+
+if [ -d /usr/share/maven ] ; then
+  export M2_HOME=/usr/share/maven
 fi
