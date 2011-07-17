@@ -30,7 +30,7 @@ if [ -d /opt/local/libexec/gnubin ] ; then
 fi
 
 # macport stuff
-if [ -d /opt/local/bin && -d /opt/local/sbin ] ; then
+if [ -d /opt/local/bin ] && [ -d /opt/local/sbin ] ; then
   PATH="/opt/local/bin:/opt/local/sbin:$PATH"
   
   if [ -d /opt/local/lib/qt3 ] ; then
