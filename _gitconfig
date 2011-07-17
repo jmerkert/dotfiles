@@ -1,13 +1,26 @@
 [user]
-    name = Saz
-    email = me@saz.sh
+  email = ich@weltraumschaf.de
+  name  = Weltraumschaf
 
 [color]
-    diff = auto
-    status = auto
-    branch = auto
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = true
 
 [push]
-    default = matching
+  default = matching
+
 [core]
-    editor = vim
+  editor   = nano
+  autocrlf = input
+
+[github]
+  user  = Weltraumschaf
+  token = xxx
+
+[merge]
+  tool = opendiff
+  
+[diff]
+  external = git-diff
