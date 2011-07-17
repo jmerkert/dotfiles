@@ -20,6 +20,10 @@ if [ -f "$HOME/.config/golang" ] ; then
   "$HOME/.config/golang"
 fi
 
+if [ -f "$HOME/.config/perl" ] ; then
+  "$HOME/.config/perl"
+fi
+
 # GNU core utils
 if [ -d /opt/local/libexec/gnubin ] ; then
   PATH="/opt/local/libexec/gnubin/:$PATH"
@@ -51,11 +55,6 @@ fi
 # cabal installation
 if [ -d "" ] ; then
   PATH="$HOME/.cabal/bin:$PATH"
-fi
-
-# Perl 5
-if [ -d "$HOME/perl5/bin" ] ; then
-  PATH="$HOME/perl5/bin:$PATH"
 fi
 
 export PATH
