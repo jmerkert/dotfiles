@@ -16,3 +16,7 @@ alias ls='ls $LS_OPTIONS -hF'
 
 alias df='df -h'
 alias ..='cd ..'
+
+alias finddarcsbup="find . -iname \"*-darcs-backup*\""
+alias rmdarcsbup="find . -iname \"*-darcs-backup*\" -exec rm -rf {} \;"
+alias rmtailingws="sed \"s/^\s*//;s/\s*$//\" -i "

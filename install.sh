@@ -6,13 +6,13 @@ function linkFile {
 
     # Only create backup if target is a file or directory
     if [ -f "${target}" ] || [ -d "${target}" ]; then
-        mv $target $target.bak
+        mv "$target" "$target.bak"
     fi
 
-    ln -sf ${source} ${target}
+    ln -sf "${source}" "${target}"
 }
 
 for i in _*
 do
-  linkFile $i
+  linkFile "$i"
 done
