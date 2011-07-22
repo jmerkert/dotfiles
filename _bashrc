@@ -46,6 +46,11 @@ if [ -d /usr/local/mysql/bin ] ; then
   PATH="/usr/local/mysql/bin:$PATH"
 fi
 
+# Haskell Plattform
+if [ -d "$HOME/Library/Haskell/bin" ] ; then
+  PATH="$HOME/Library/Haskell/bin:$PATH"
+fi
+
 # cabal installation
 if [ -d "$HOME/.cabal/bin" ] ; then
   PATH="$HOME/.cabal/bin:$PATH"
