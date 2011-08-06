@@ -1,7 +1,3 @@
-[user]
-  email = ich@weltraumschaf.de
-  name  = Weltraumschaf
-
 [color]
   diff   = auto
   status = auto
@@ -14,10 +10,6 @@
 [core]
   editor   = nano
   autocrlf = input
-
-[github]
-  user  = Weltraumschaf
-  token = xxx
 
 [merge]
   tool = opendiff
