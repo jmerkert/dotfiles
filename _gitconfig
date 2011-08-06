@@ -15,4 +15,4 @@
   tool = opendiff
   
 [diff]
-  external = git-diff
+  external = ~/bin/git-diff
