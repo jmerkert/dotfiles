@@ -123,7 +123,17 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 parse_git_branch() {
-  git name-rev HEAD 2> /dev/null | sed "s#HEAD\ \(.*\)#(\1)\ #"
+    branch=$(git branch 2&gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
+    if [ "$branch" ]; then
+        if [ "$branch" = '((no branch))' ]; then
+            tag=$(git describe 2&gt; /dev/null)
+            if [ $? -eq 0 ]; then
+                echo "(no branch, $tag)"
+            fi
+        else
+            echo $branch
+        fi
+    fi
 }
 
 if [ "$color_prompt" = yes ]; then
