@@ -1,0 +1,60 @@
+include "/usr/share/nano/asm.nanorc"
+include "/usr/share/nano/c.nanorc"
+include "/usr/share/nano/groff.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/java.nanorc"
+include "/usr/share/nano/man.nanorc"
+include "/usr/share/nano/mutt.nanorc"
+include "/usr/share/nano/nanorc.nanorc"
+include "/usr/share/nano/patch.nanorc"
+include "/usr/share/nano/perl.nanorc"
+include "/usr/share/nano/pov.nanorc"
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/ruby.nanorc"
+include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/tex.nanorc"
+
+## JavaScript
+#############
+
+syntax "JavaScript" "\.(js)$"
+# Default
+color white "^.+$"
+# Decimal, cotal and hexadecimal numbers
+color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+# Floating point number with at least one digit before decimal point
+color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+# Keywords
+color green "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
+color green "\<(for|function|if|in|instanceof|new|null|return|switch)\>"
+color green "\<(switch|this|throw|try|typeof|undefined|var|void|while|with)\>"
+# Type specifiers
+color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
+color red "\<(Number|Object|RegExp|String)\>"
+color red "\<(true|false)\>"
+# String
+color brightyellow "L?\"(\\"|[^"])*\""
+color brightyellow "L?'(\'|[^'])*'"
+# Escapes
+color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+# Comments
+color magenta start="/\*" end="\*/"
+color magenta "//.*$"
+
+## PHP
+######
+
+syntax "php" "\.php[2345s~]?$"
+color brightblue start="<\?(php)?" end="\?>"
+color blue start="<[^\?]" end="[^\?]>"
+color cyan "\$[a-zA-Z_0-9]*"
+color cyan "(\[)|(\])"
+color red "(var|class|function|echo|case|break|default|exit|switch|if|else|elseif|@|while)\s"
+color red "="
+color green "[,{}()]"
+color green "(=|!|<|>)"
+color white "('[^']*')|(\"[^"]*\")"
+color yellow start="<!--" end="-->"
+color yellow start="/\*" end="\*/"
+color yellow start="#" end="$"
