@@ -16,3 +16,6 @@
   
 [diff]
   external = ~/bin/git-diff
+[user]
+	name = Weltraumschaf
+	ema = ich@weltraumschaf.de
