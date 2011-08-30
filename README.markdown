@@ -1,3 +1,9 @@
+
+TODO
+====
+Pfad von arbeit
+/usr/local/bin:/usr/bin:/bin:/usr/games:/repos/system.darcs/bin:/repos/system.deploy/bin:/repos/kwick.dev/bin:/www/tools/bin:/repos/srctest/bin:/usr/sbin:/repos/system.deploy/bin:/repos/kwick.dev/bin
+
 ## Files
 .vim
     directory of file type configurations and plugins
