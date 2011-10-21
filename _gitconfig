@@ -10,7 +10,7 @@
 [core]
   editor   = nano
   autocrlf = input
-	excludesfile = /Users/sst/.gitignore_global
+  excludesfile = /Users/sst/.gitignore_global
 
 [merge]
   tool = opendiff
