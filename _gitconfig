@@ -14,9 +14,17 @@
 
 [merge]
   tool = opendiff
+
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
   
 [diff]
   external = ~/bin/git-diff
+
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 
 [user]
   name = Weltraumschaf
@@ -24,7 +32,6 @@
 
 [github]
   user  = Weltraumschaf
-  token = xxx
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
