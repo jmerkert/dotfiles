@@ -32,6 +32,7 @@
 
 [github]
   user  = Weltraumschaf
+  token = 46842456237abd206a1254ddbb4d94fb
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"

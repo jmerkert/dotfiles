@@ -1,10 +1,16 @@
-if [ -d "$HOME/go" ] ; then
-  export GOROOT="$HOME/go"
+if [ -d "${HOME}/go" ] ; then
+  export GOROOT="${HOME}/go"
 fi
 
-if [ -d "$HOME/bin" ] ; then
-  export GOBIN="$HOME/bin"
+if [ -d "${HOME}/bin" ] ; then
+  export GOBIN="${HOME}/bin"
 fi
 
 export GOARCH=amd64
 export GOOS=darwin
+
+if [ "${GOOS}" == "darwin" ]; then
+    export GOPATH="${HOME}/Library/go"
+else 
+    export GOPATH="{HOME}/lib/go"
+fi
