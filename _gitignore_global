@@ -9,6 +9,7 @@
 *.a
 _obj
 _test
+target/
 
 # Logs and databases #
 ######################
