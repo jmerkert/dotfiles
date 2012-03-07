@@ -1,2 +1,7 @@
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
+
+# http://stackoverflow.com/questions/4606570/os-x-terminal-utf-8-issues
+set input-meta on
+set output-meta on
+set convert-meta off
