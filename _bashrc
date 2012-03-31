@@ -8,6 +8,9 @@
 # dont nerv me!
 set bell-style none
 
+echo "Default PATH is $PATH"
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
 # enable 256 colors in terminal (useful for vim colorschemes)
 if [ -e /usr/share/terminfo/x/xterm-256color ] ; then
 	export TERM='xterm-256color'
