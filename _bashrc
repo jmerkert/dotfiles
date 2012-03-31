@@ -64,6 +64,7 @@ if [ -d "$HOME/bin" ] ; then
   PATH="$HOME/bin:$PATH"
 fi
 
+echo "Customized PATH is $PATH"
 export PATH
 
 if [ -d /Library/Java/Home ] ; then
