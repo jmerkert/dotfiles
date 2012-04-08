@@ -1,0 +1,64 @@
+# enable 256 colors in terminal (useful for vim colorschemes)
+if [ -e /usr/share/terminfo/x/xterm-256color ] ; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
+
+if [ -d /Library/Java/Home ] ; then
+  export JAVA_HOME=/Library/Java/Home
+fi
+
+if [ -d /opt/local/share/java/grails ] ; then
+  export GRAILS_HOME=/opt/local/share/java/grails
+fi
+
+if [ -d "$HOME/Applications/UMLet" ] ; then
+  export UMLET_HOME="$HOME/Applications/UMLet"
+fi
+
+export MAVEN_OPTS="-Xmx512m"
+
+if [ -d /usr/share/maven ] ; then
+  export M2_HOME=/usr/share/maven
+fi
+
+# Make nano the default editor
+export EDITOR="nano"
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+export LESS="-iFRsX"
+# Make less the pager
+export PAGER=less
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+# Make some commands not show up in history
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+
+# Set to UTF-8 and english locale
+export LANG="en_US.UTF-8"
+
+# Set to 'C' to make ls sort dotfiles
+export LC_COLLATE=C
+export CLICOLOR=1
+
+# options for darcs
+export DARCS_DONT_ESCAPE_8BIT=1
+export DARCS_DO_COLOR_LINES=1
+export DARCS_ALWAYS_COLOR=1
+
+
+if [ "Linux" == "$(uname)" ]; then
+    # Export some debian stuff
+    DEBEMAIL=$DEBEMAIL_local
+    DEBFULLNAME=$DEBFULLNAME_local
+    export DEBEMAIL DEBFULLNAME
+fi

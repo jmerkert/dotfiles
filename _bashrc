@@ -5,18 +5,14 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+if [ -f "$HOME/.bash_aliases" ] ; then
+  . "$HOME/.bash_exports"
+fi
+
 # dont nerv me!
 set bell-style none
 
-echo "Default PATH is $PATH"
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-
-# enable 256 colors in terminal (useful for vim colorschemes)
-if [ -e /usr/share/terminfo/x/xterm-256color ] ; then
-	export TERM='xterm-256color'
-else
-	export TERM='xterm-color'
-fi
 
 if [ -f "$HOME/.config/golang" ] ; then
   . "$HOME/.config/golang"
@@ -64,26 +60,7 @@ if [ -d "$HOME/bin" ] ; then
   PATH="$HOME/bin:$PATH"
 fi
 
-echo "Customized PATH is $PATH"
 export PATH
-
-if [ -d /Library/Java/Home ] ; then
-  export JAVA_HOME=/Library/Java/Home
-fi
-
-if [ -d /opt/local/share/java/grails ] ; then
-  export GRAILS_HOME=/opt/local/share/java/grails
-fi
-
-if [ -d "$HOME/Applications/UMLet" ] ; then
-  export UMLET_HOME="$HOME/Applications/UMLet"
-fi
-
-export MAVEN_OPTS="-Xmx512m"
-
-if [ -d /usr/share/maven ] ; then
-  export M2_HOME=/usr/share/maven
-fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -92,11 +69,6 @@ HISTCONTROL=ignoredups:ignorespace
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# Set HISTSIZE and HISTFILESIZE to an empty value as we append and love our history :)
-# unset isn't working. It will be reset to 500 everytime!
-export HISTSIZE=
-export HISTFILESIZE=
-
 # Save history immediatly after running command
 # With "history -n" it's possible to read all new lines since last read
 PROMPT_COMMAND="history -a"
@@ -104,12 +76,7 @@ PROMPT_COMMAND="history -a"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-export LESS="-iFRsX"
-export PAGER=less
-
+z
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -172,13 +139,6 @@ if [ -f "$HOME/.config/git_completion" ] ; then
   . "$HOME/.config/git_completion"
 fi
 
-# Set to UTF-8 and english locale
-export LANG="en_US.UTF-8"
-
-# Set to 'C' to make ls sort dotfiles
-export LC_COLLATE=C
-export CLICOLOR=1
-
 # for `ls` (GNU coreutils, homebrew)
 # port install coreutils +with_default_names
 if [ "$TERM" != "dumb" ] ; then
@@ -193,9 +153,6 @@ if [ "$TERM" != "dumb" ] ; then
     eval `dircolors "$HOME/.dir_colors"`
   fi
 fi
-
-# Set the right editor
-export EDITOR=/usr/bin/nano
 
 # Set CONCURRENCY_LEVEL to number of CPUs
 if [ -f /proc/cpuinfo ]; then
@@ -213,16 +170,6 @@ export CONCURRENCY_LEVEL
 if [ -f "$HOME/.bash_local" ]; then
 	. "$HOME/.bash_local"
 fi
-
-# Export some debian stuff
-DEBEMAIL=$DEBEMAIL_local
-DEBFULLNAME=$DEBFULLNAME_local
-export DEBEMAIL DEBFULLNAME
-
-# options for darcs
-export DARCS_DONT_ESCAPE_8BIT=1
-export DARCS_DO_COLOR_LINES=1
-export DARCS_ALWAYS_COLOR=1
 
 # In case, we've changed the directory, switch back to home dir
 cd
