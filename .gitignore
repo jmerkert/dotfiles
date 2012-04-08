@@ -1,5 +1,2 @@
-*.pyc
-*.swp
-*~
-.DS_Store
 .redcar/
+*.sublime-*
