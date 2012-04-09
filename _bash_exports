@@ -56,7 +56,7 @@ export DARCS_DO_COLOR_LINES=1
 export DARCS_ALWAYS_COLOR=1
 
 
-if [ "Linux" == "$(uname)" ]; then
+if [ "linux-gnu" == "$OSTYPE" ]; then
     # Export some debian stuff
     DEBEMAIL=$DEBEMAIL_local
     DEBFULLNAME=$DEBFULLNAME_local
