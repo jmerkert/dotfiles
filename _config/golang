@@ -5,7 +5,7 @@ if [ -d "/usr/local/go/" ] ; then
 
   export GOARCH=amd64  
 
-  if [ "linux-gnu" == "$OSTYPE" ]; then
+  if [ "linux-gnu" = "$OSTYPE" ]; then
     export GOOS=linux
     export GOPATH="{HOME}/lib/go"
   else 
