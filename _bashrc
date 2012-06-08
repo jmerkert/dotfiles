@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-if [ -f "$HOME/.bash_aliases" ] ; then
+if [ -f "$HOME/.bash_exports" ] ; then
   . "$HOME/.bash_exports"
 fi
 
