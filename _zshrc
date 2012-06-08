@@ -1,0 +1,96 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="sunrise"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git osx ruby gem macports node npm nyan phing svn)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+if [ -f "$HOME/.bash_exports" ] ; then
+  . "$HOME/.bash_exports"
+fi
+
+# dont nerv me!
+set bell-style none
+
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+if [ -f "$HOME/.config/golang" ] ; then
+  . "$HOME/.config/golang"
+fi
+
+if [ -f "$HOME/.config/perl" ] ; then
+  . "$HOME/.config/perl"
+fi
+
+# GNU core utils
+if [ -d /opt/local/libexec/gnubin ] ; then
+  PATH="/opt/local/libexec/gnubin:$PATH"
+fi
+
+# macport stuff
+if [ -d /opt/local/bin ] && [ -d /opt/local/sbin ] ; then
+  PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+  
+  if [ -d /opt/local/lib/qt3 ] ; then
+    export QTDIR=/opt/local/lib/qt3
+  fi
+  
+  if [ -d /opt/local/share/man ] ; then
+    export MANPATH="/opt/local/share/man:$MANPATH"
+  fi
+fi
+
+# mysql binaries
+if [ -d /usr/local/mysql/bin ] ; then
+  PATH="/usr/local/mysql/bin:$PATH"
+fi
+
+# Haskell Plattform
+if [ -d "$HOME/Library/Haskell/bin" ] ; then
+  PATH="$HOME/Library/Haskell/bin:$PATH"
+fi
+
+# cabal installation
+if [ -d "$HOME/.cabal/bin" ] ; then
+  PATH="$HOME/.cabal/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+export PATH
+
+if [ -f "$HOME/.ssh_aliases" ] ; then
+    source "$HOME/.ssh_aliases"
+fi
