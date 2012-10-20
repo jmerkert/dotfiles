@@ -10,17 +10,21 @@ if [ -d /Library/Java/Home ] ; then
 fi
 
 if [ -d /opt/local/share/java/grails ] ; then
-  export GRAILS_HOME=/opt/local/share/java/grails
+  export GRAILS_HOME="/opt/local/share/java/grails"
 fi
 
 if [ -d "$HOME/Applications/UMLet" ] ; then
-  export UMLET_HOME="$HOME/Applications/UMLet"
+  export UMLET_HOME="${HOME}/Applications/UMLet"
 fi
 
-export MAVEN_OPTS="-Xmx512m"
-
 if [ -d /usr/share/maven ] ; then
-  export M2_HOME=/usr/share/maven
+  export M2_HOME="/usr/share/maven"
+  export MAVEN_OPTS="-Xmx512m"
+  export M2="${HOME}/.m2"
+fi
+
+if [ -d /usr/share/ant/ ] ; then 
+  export ANT_HOME="/usr/share/ant"
 fi
 
 # Make nano the default editor
