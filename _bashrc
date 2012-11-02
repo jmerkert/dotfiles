@@ -195,3 +195,7 @@ if [ "$SHLVL" -gt 4 ]; then
 fi
 
 export _PATH=$PATH # Workaround for screen on mac os
+
+if [ "$(tty)" = "/dev/tty1" -o "$(tty)" = "/dev/vc/1" ] ; then
+	startxfce4
+fi
