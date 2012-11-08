@@ -9,6 +9,10 @@ if [ -f "$HOME/.bash_exports" ] ; then
   . "$HOME/.bash_exports"
 fi
 
+if [ -f "${HOME}/.bash_functions" ]; then
+  . "${HOME}/.bash_functions"
+fi
+
 # dont nerv me!
 set bell-style none
 
