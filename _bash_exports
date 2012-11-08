@@ -19,12 +19,22 @@ fi
 
 if [ -d /usr/share/maven ] ; then
   export M2_HOME="/usr/share/maven"
-  export MAVEN_OPTS="-Xmx512m"
-  export M2="${HOME}/.m2"
+  export MAVEN_OPTS="-Xms256m -Xmx512m"
+  export M2="${M2_HOME}/bin"
+fi
+
+if [ -d /cygdrive/d/Programme/apache-maven-3.0.4 ] ; then
+  export M2_HOME="/cygdrive/d/Programme/apache-maven-3.0.4"
+  export MAVEN_OPTS="-Xms256m -Xmx512m"
+  export M2="${M2_HOME}/bin"
 fi
 
 if [ -d /usr/share/ant/ ] ; then 
   export ANT_HOME="/usr/share/ant"
+fi
+
+if [ -d /cygdrive/d/Programme/apache-ant-1.8.4 ] ; then 
+  export ANT_HOME="/cygdrive/d/Programme/apache-ant-1.8.4"
 fi
 
 # Make nano the default editor
