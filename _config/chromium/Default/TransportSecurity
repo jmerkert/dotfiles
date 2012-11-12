@@ -1,0 +1,10 @@
+{
+   "rW+wYIpa775r/ltnG64XJN/3ymSAvf9uipSc/e4oDpM=": {
+      "created": 1351852246.691211,
+      "dynamic_spki_hashes_expiry": 0.0,
+      "expiry": 1351866646.691142,
+      "include_subdomains": false,
+      "mode": "force-https",
+      "static_spki_hashes": [  ]
+   }
+}
