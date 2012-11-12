@@ -3,9 +3,9 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[ -z "${PS1}" ] && return
 
-if [ -f "$HOME/.bash_exports" ] ; then
+if [ -f "${HOME}/.bash_exports" ] ; then
   . "$HOME/.bash_exports"
 fi
 
@@ -14,8 +14,8 @@ set bell-style none
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
-if [ -f "$HOME/.config/golang" ] ; then
-  . "$HOME/.config/golang"
+if [ -f "${HOME}/.config/golang" ] ; then
+  . "${HOME}/.config/golang"
 fi
 
 if [ -f "$HOME/.config/perl" ] ; then
@@ -23,41 +23,41 @@ if [ -f "$HOME/.config/perl" ] ; then
 fi
 
 # GNU core utils
-if [ -d /opt/local/libexec/gnubin ] ; then
-  PATH="/opt/local/libexec/gnubin:$PATH"
+if [ -d "/opt/local/libexec/gnubin" ] ; then
+  PATH="/opt/local/libexec/gnubin:${PATH}"
 fi
 
 # macport stuff
-if [ -d /opt/local/bin ] && [ -d /opt/local/sbin ] ; then
-  PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+if [ -d "/opt/local/bin" ] && [ -d "/opt/local/sbin" ] ; then
+  PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
   
-  if [ -d /opt/local/lib/qt3 ] ; then
-    export QTDIR=/opt/local/lib/qt3
+  if [ -d "/opt/local/lib/qt3" ] ; then
+    export QTDIR="/opt/local/lib/qt3"
   fi
   
-  if [ -d /opt/local/share/man ] ; then
-    export MANPATH="/opt/local/share/man:$MANPATH"
+  if [ -d "/opt/local/share/man" ] ; then
+    export MANPATH="/opt/local/share/man:${MANPATH}"
   fi
 fi
 
 # mysql binaries
-if [ -d /usr/local/mysql/bin ] ; then
-  PATH="/usr/local/mysql/bin:$PATH"
+if [ -d "/usr/local/mysql/bin" ] ; then
+  PATH="/usr/local/mysql/bin:${PATH}"
 fi
 
 # Haskell Plattform
-if [ -d "$HOME/Library/Haskell/bin" ] ; then
-  PATH="$HOME/Library/Haskell/bin:$PATH"
+if [ -d "${HOME}/Library/Haskell/bin" ] ; then
+  PATH="${HOME}/Library/Haskell/bin:${PATH}"
 fi
 
 # cabal installation
-if [ -d "$HOME/.cabal/bin" ] ; then
-  PATH="$HOME/.cabal/bin:$PATH"
+if [ -d "${HOME}/.cabal/bin" ] ; then
+  PATH="${HOME}/.cabal/bin:${PATH}"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-  PATH="$HOME/bin:$PATH"
+if [ -d "${HOME}/bin" ] ; then
+  PATH="${HOME}/bin:${PATH}"
 fi
 
 export PATH
@@ -107,11 +107,12 @@ parse_git_branch() {
     fi
 }
 
-if [ "$color_prompt" = yes ]; then
-  PS1='\u@\h \w \[\033[90m\]$(parse_git_branch)\[\033[37m\]$\[\033[00m\] '
+if [ "${color_prompt}" = yes ] ; then
+	PS1='\u@\h \w \[\033[90m\]$(parse_git_branch)\[\033[37m\]$\[\033[00m\] '
 else
 	PS1='\u@\h \w $(parse_git_branch) '
 fi
+
 export PS1
 
 unset color_prompt force_color_prompt
@@ -120,23 +121,23 @@ unset color_prompt force_color_prompt
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f "$HOME/.bash_aliases" ] ; then
-  . "$HOME/.bash_aliases"
+if [ -f "${HOME}/.bash_aliases" ] ; then
+  . "${HOME}/.bash_aliases"
 fi
 
-if [ -f "$HOME/.ssh_aliases" ] ; then
-    source "$HOME/.ssh_aliases"
+if [ -f "${HOME}/.ssh_aliases" ] ; then
+ 	. "${HOME}/.ssh_aliases"
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix ; then
-  . /etc/bash_completion
+if [ -f "/etc/bash_completion" ] && ! shopt -oq posix ; then
+  . "/etc/bash_completion"
 fi
 
-if [ -f "$HOME/.config/git_completion" ] ; then
-  . "$HOME/.config/git_completion"
+if [ -f "${HOME}/.config/git_completion" ] ; then
+  . "${HOME}/.config/git_completion"
 fi
 
 # for `ls` (GNU coreutils, homebrew)
@@ -164,11 +165,12 @@ elif [ -x "`which system_profiler`" ]; then
 else
   CONCURRENCY_LEVEL=1
 fi
+
 export CONCURRENCY_LEVEL
 
 # Source additional information, which applies to the current host only
-if [ -f "$HOME/.bash_local" ]; then
-	. "$HOME/.bash_local"
+if [ -f "${HOME}/.bash_local" ]; then
+	. "${HOME}/.bash_local"
 fi
 
 # In case, we've changed the directory, switch back to home dir
