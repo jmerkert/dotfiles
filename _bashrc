@@ -28,16 +28,20 @@ if [ -d "/opt/local/libexec/gnubin" ] ; then
 fi
 
 # macport stuff
-if [ -d "/opt/local/bin" ] && [ -d "/opt/local/sbin" ] ; then
-  PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
+if [ -d "/opt/local/bin" ] ; then
+  PATH="/opt/local/bin:${PATH}"
+fi
+
+if [ -d "/opt/local/sbin" ] ; then
+  PATH="/opt/local/sbin:${PATH}"
+fi  
+
+if [ -d "/opt/local/lib/qt3" ] ; then
+  export QTDIR="/opt/local/lib/qt3"
+fi
   
-  if [ -d "/opt/local/lib/qt3" ] ; then
-    export QTDIR="/opt/local/lib/qt3"
-  fi
-  
-  if [ -d "/opt/local/share/man" ] ; then
-    export MANPATH="/opt/local/share/man:${MANPATH}"
-  fi
+if [ -d "/opt/local/share/man" ] ; then
+  export MANPATH="/opt/local/share/man:${MANPATH}"
 fi
 
 # mysql binaries
