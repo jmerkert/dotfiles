@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Eclipse
+Comment=Eclipse Integrated Development Environment
+Icon=/opt/local/share/eclipse/icon.xpm
+Exec=/opt/local/bin/eclipse
+Terminal=false
+Categories=Development;IDE;Java;
+X-XFCE-Source=file:///usr/share/applications/eclipse.desktop
+Path=/opt/local/share/eclipse
+StartupNotify=false

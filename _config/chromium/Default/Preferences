@@ -21,15 +21,15 @@
       "last_prompted_google_url": "http://www.google.de/",
       "show_home_button": true,
       "window_placement": {
-         "bottom": 989,
-         "left": 170,
+         "bottom": 916,
+         "left": 0,
          "maximized": false,
-         "right": 1220,
-         "top": 21,
-         "work_area_bottom": 1009,
+         "right": 1050,
+         "top": 24,
+         "work_area_bottom": 1200,
          "work_area_left": 0,
-         "work_area_right": 1440,
-         "work_area_top": 21
+         "work_area_right": 3840,
+         "work_area_top": 24
       }
    },
    "countryid_at_install": 21843,
@@ -56,8 +56,8 @@
       "skip_first_run_ui": true
    },
    "dns_prefetching": {
-      "host_referral_list": [ 2, [ "http://stackoverflow.com/", [ "http://ajax.googleapis.com/", 2.2733802, "http://careers.stackoverflow.com/", 2.6037003999999997, "http://careerscdn.sstatic.net/", 2.9340205999999998, "http://cdn.sstatic.net/", 3.875829554239999, "http://edge.quantserve.com/", 2.2733802, "http://engine.adzerk.net/", 4.361003864, "http://stackoverflow.com/", 2.2733802, "http://static.adzerk.net/", 3.5946609999999994, "http://www.google-analytics.com/", 2.6037003999999997, "http://www.gravatar.com/", 6.217403387999998 ] ], [ "http://www.debian.org/", [ "http://www.debian.org/", 3.2643407999999994 ] ], [ "http://www.google.de/", [ "http://ssl.gstatic.com/", 0.589011013350144, "http://www.google.com/", 0.526333627445472, "http://www.google.de/", 4.383841832669375 ] ] ],
-      "startup_list": [ 1, "http://ajax.googleapis.com/", "http://cdn.sstatic.net/", "http://edge.quantserve.com/", "http://ssl.gstatic.com/", "http://stackoverflow.com/", "http://www.debian.org/", "http://www.google-analytics.com/", "http://www.google.com/", "http://www.google.de/", "http://www.gravatar.com/" ]
+      "host_referral_list": [ 2, [ "http://stackoverflow.com/", [ "http://ajax.googleapis.com/", 2.084686339270529, "http://careers.stackoverflow.com/", 2.387589482583341, "http://careerscdn.sstatic.net/", 2.690492625896153, "http://cdn.sstatic.net/", 3.5541300681096413, "http://edge.quantserve.com/", 2.084686339270529, "http://engine.adzerk.net/", 3.9990342050075007, "http://stackoverflow.com/", 2.084686339270529, "http://static.adzerk.net/", 3.2962989125217765, "http://www.google-analytics.com/", 2.387589482583341, "http://www.gravatar.com/", 5.701349870425503 ] ], [ "http://www.debian.org/", [ "http://www.debian.org/", 2.9933957692089646 ] ], [ "http://www.google.de/", [ "http://ssl.gstatic.com/", 0.356480680494718, "http://www.google.com/", 0.31854713312037486, "http://www.google.de/", 2.6531845487958536 ] ] ],
+      "startup_list": [ 1 ]
    },
    "download": {
       "directory_upgrade": true
@@ -65,7 +65,7 @@
    "extensions": {
       "autoupdate": {
          "last_check": "12996326000441949",
-         "next_check": "12996342222380364"
+         "next_check": "12997472779942092"
       },
       "blacklistupdate": {
          "lastpingday": "12996313197038838",
@@ -1347,7 +1347,7 @@
    },
    "ntp": {
       "app_page_names": [ "Apps" ],
-      "promo_resource_cache_update": "1351850109.136367"
+      "promo_resource_cache_update": "1352996883.789972"
    },
    "plugins": {
       "enabled_internal_pdf3": true,
@@ -1369,7 +1369,7 @@
          "clear_on_exit_migrated": true,
          "pref_version": 1
       },
-      "exited_cleanly": false,
+      "exited_cleanly": true,
       "name": "First user"
    },
    "session": {

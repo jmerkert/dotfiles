@@ -1,14 +1,15 @@
 [Desktop Entry]
-Name=Icedove Mail/News
+Name=Thunderbird
 Comment=Read/Write Mail/News with Icedove
 GenericName=Mail Client
 Exec=icedove %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=icedove
+Icon=/home/sst/Bilder/icons/Mozilla-Thunderbird-icon.png
 Categories=Network;Email;News;GTK;
 MimeType=message/rfc822;x-scheme-handler/mailto;
 StartupWMClass=Icedove-bin
 StartupNotify=true
 X-XFCE-Source=file:///usr/share/applications/icedove.desktop
+Path=
