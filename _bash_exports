@@ -47,12 +47,12 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="cd:cd -:pwd;exit:date:* --help"
 
 # http://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html#The-LANGUAGE-variable
-export LANGUAGE=en
+export LANGUAGE=en_US.UTF-8
 
 # Set to UTF-8 and english locale
 # http://www.gnu.org/software/gettext/manual/html_node/Locale-Environment-Variables.html
-export LANG=de_DE.UTF-8
-export LC_ALL=de_DE.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 export CLICOLOR=1
 
