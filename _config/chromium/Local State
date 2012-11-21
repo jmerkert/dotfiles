@@ -28,22 +28,22 @@
    },
    "uninstall_metrics": {
       "installation_date2": "1351850103",
-      "launch_count": "6"
+      "launch_count": "7"
    },
    "user_experience_metrics": {
       "low_entropy_source": 5384,
-      "session_id": 5,
+      "session_id": 6,
       "stability": {
-         "breakpad_registration_fail": 2,
+         "breakpad_registration_fail": 3,
          "breakpad_registration_ok": 0,
          "crash_count": 0,
-         "debugger_not_present": 2,
+         "debugger_not_present": 3,
          "debugger_present": 0,
          "exited_cleanly": true,
          "incomplete_session_end_count": 0,
-         "last_timestamp_sec": "1352996890",
-         "launch_count": 3,
-         "launch_time_sec": "1352996871",
+         "last_timestamp_sec": "1353433279",
+         "launch_count": 4,
+         "launch_time_sec": "1353433260",
          "page_load_count": 0,
          "renderer_crash_count": 0,
          "renderer_hang_count": 0,

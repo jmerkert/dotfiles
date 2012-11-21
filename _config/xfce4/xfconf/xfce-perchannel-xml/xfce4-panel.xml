@@ -65,8 +65,10 @@
         <value type="string" value="skype"/>
         <value type="string" value="benachrichtigungsdienst für aktualisierungen"/>
         <value type="string" value="orage"/>
+        <value type="string" value="clipman"/>
         <value type="string" value="notizen"/>
         <value type="string" value="netzwerk-manager-applet"/>
+        <value type="string" value="notes"/>
         <value type="string" value="kerneloops-applet"/>
       </property>
     </property>

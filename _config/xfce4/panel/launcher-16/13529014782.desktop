@@ -2,10 +2,12 @@
 Encoding=UTF-8
 Name=NetBeans IDE 7.2.1
 Comment=The Smarter Way to Code
-Exec=/bin/sh "/home/sst/bin/netbeans-7.2.1/bin/netbeans"
-Icon=/home/sst/bin/netbeans-7.2.1/nb/netbeans.png
+Exec=/bin/sh "/usr/local/bin/netbeans-7.2.1/bin/netbeans"
+Icon=/usr/local/netbeans-7.2.1/nb/netbeans.png
 Categories=Application;Development;Java;IDE
 Version=1.0
 Type=Application
-Terminal=0
+Terminal=false
 X-XFCE-Source=file:///home/sst/.local/share/applications/netbeans-7.2.1.desktop
+Path=
+StartupNotify=false

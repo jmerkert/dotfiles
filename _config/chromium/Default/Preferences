@@ -21,11 +21,11 @@
       "last_prompted_google_url": "http://www.google.de/",
       "show_home_button": true,
       "window_placement": {
-         "bottom": 916,
-         "left": 0,
+         "bottom": 1172,
+         "left": 1912,
          "maximized": false,
-         "right": 1050,
-         "top": 24,
+         "right": 2962,
+         "top": 280,
          "work_area_bottom": 1200,
          "work_area_left": 0,
          "work_area_right": 3840,
@@ -56,7 +56,7 @@
       "skip_first_run_ui": true
    },
    "dns_prefetching": {
-      "host_referral_list": [ 2, [ "http://stackoverflow.com/", [ "http://ajax.googleapis.com/", 2.084686339270529, "http://careers.stackoverflow.com/", 2.387589482583341, "http://careerscdn.sstatic.net/", 2.690492625896153, "http://cdn.sstatic.net/", 3.5541300681096413, "http://edge.quantserve.com/", 2.084686339270529, "http://engine.adzerk.net/", 3.9990342050075007, "http://stackoverflow.com/", 2.084686339270529, "http://static.adzerk.net/", 3.2962989125217765, "http://www.google-analytics.com/", 2.387589482583341, "http://www.gravatar.com/", 5.701349870425503 ] ], [ "http://www.debian.org/", [ "http://www.debian.org/", 2.9933957692089646 ] ], [ "http://www.google.de/", [ "http://ssl.gstatic.com/", 0.356480680494718, "http://www.google.com/", 0.31854713312037486, "http://www.google.de/", 2.6531845487958536 ] ] ],
+      "host_referral_list": [ 2, [ "http://stackoverflow.com/", [ "http://ajax.googleapis.com/", 2.025335319191497, "http://careers.stackoverflow.com/", 2.319614810014193, "http://careerscdn.sstatic.net/", 2.6138943008368893, "http://cdn.sstatic.net/", 3.4529439850705597, "http://edge.quantserve.com/", 2.025335319191497, "http://engine.adzerk.net/", 3.885181701190937, "http://stackoverflow.com/", 2.025335319191497, "http://static.adzerk.net/", 3.202453282482282, "http://www.google-analytics.com/", 2.319614810014193, "http://www.gravatar.com/", 5.5390324396144885 ] ], [ "http://www.debian.org/", [ "http://www.debian.org/", 2.9081737916595856 ] ], [ "http://www.google.de/", [ "http://ssl.gstatic.com/", 0.3463316755210334, "http://www.google.com/", 0.30947809624043776, "http://www.google.de/", 2.577648384691636 ] ] ],
       "startup_list": [ 1 ]
    },
    "download": {
@@ -65,7 +65,7 @@
    "extensions": {
       "autoupdate": {
          "last_check": "12996326000441949",
-         "next_check": "12997472779942092"
+         "next_check": "12997907892889534"
       },
       "blacklistupdate": {
          "lastpingday": "12996313197038838",
@@ -1347,7 +1347,7 @@
    },
    "ntp": {
       "app_page_names": [ "Apps" ],
-      "promo_resource_cache_update": "1352996883.789972"
+      "promo_resource_cache_update": "1353433268.539718"
    },
    "plugins": {
       "enabled_internal_pdf3": true,
