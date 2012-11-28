@@ -6,7 +6,7 @@
 [ -z "${PS1}" ] && return
 
 if [ -f "${HOME}/.bash_exports" ] ; then
-  . "$HOME/.bash_exports"
+  . "${HOME}/.bash_exports"
 fi
 
 # dont nerv me!
