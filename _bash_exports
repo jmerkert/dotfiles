@@ -13,7 +13,7 @@ if [ -d /opt/local/share/java/grails ] ; then
   export GRAILS_HOME="/opt/local/share/java/grails"
 fi
 
-if [ -d "$HOME/Applications/UMLet" ] ; then
+if [ -d "${HOME}/Applications/UMLet" ] ; then
   export UMLET_HOME="${HOME}/Applications/UMLet"
 fi
 
@@ -62,9 +62,13 @@ export DARCS_DO_COLOR_LINES=1
 export DARCS_ALWAYS_COLOR=1
 
 
-if [ "linux-gnu" = "$OSTYPE" ]; then
+if [ "linux-gnu" = "${OSTYPE}" ]; then
     # Export some debian stuff
     DEBEMAIL=$DEBEMAIL_local
     DEBFULLNAME=$DEBFULLNAME_local
     export DEBEMAIL DEBFULLNAME
+fi
+
+if [ -f "${HOME}/.local_exports" ] ; then
+  . "${HOME}/.local_exports"
 fi
