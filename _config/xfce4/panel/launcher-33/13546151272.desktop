@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=ReText
+Comment=Simple text editor for Markdown and reStructuredText
+Categories=Office;TextEditor;
+Exec=/usr/bin/retext %F
+Type=Application
+Icon=retext
+MimeType=text/x-retext-markdown;text/x-retext-rst;
+X-XFCE-Source=file:///usr/share/applications/retext.desktop

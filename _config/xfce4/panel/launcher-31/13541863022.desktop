@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Umlet
+Type=Application
+Comment=UML tool
+Terminal=false
+Exec=/home/sst/bin/umlet
+Icon=/home/sst/bin/Umlet/img/umlet_logo.png
+Categories=ConsoleOnly;System;
+GenericName=Process Viewer
+X-XFCE-Source=file:///usr/share/applications/htop.desktop
+Path=
+StartupNotify=false

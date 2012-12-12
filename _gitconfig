@@ -20,7 +20,7 @@
   trustExitCode = true
   
 [diff]
-  external = ~/bin/git-diff
+#  external = ~/bin/git-diff
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"

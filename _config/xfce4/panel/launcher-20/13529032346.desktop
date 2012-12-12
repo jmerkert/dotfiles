@@ -2,10 +2,10 @@
 Type=Application
 Name=Eclipse
 Comment=Eclipse Integrated Development Environment
-Icon=/usr/local/eclipse/icon.xpm
-Exec=/usr/local/bin/eclipse
+Icon=/home/sst/bin/eclipse-juno/icon.xpm
+Exec=/home/sst/bin/eclipse
 Terminal=false
 Categories=Development;IDE;Java;
 X-XFCE-Source=file:///usr/share/applications/eclipse.desktop
-Path=/usr/local/share/eclipse
+Path=
 StartupNotify=false

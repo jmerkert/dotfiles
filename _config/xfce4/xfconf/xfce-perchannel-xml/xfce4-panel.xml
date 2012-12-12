@@ -20,26 +20,36 @@
     </property>
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=1;x=1749;y=562"/>
-      <property name="size" type="uint" value="40"/>
+      <property name="size" type="uint" value="34"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="7"/>
+        <value type="int" value="14"/>
         <value type="int" value="8"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="23"/>
+        <value type="int" value="30"/>
+        <value type="int" value="29"/>
+        <value type="int" value="26"/>
         <value type="int" value="15"/>
         <value type="int" value="20"/>
-        <value type="int" value="16"/>
         <value type="int" value="22"/>
+        <value type="int" value="33"/>
+        <value type="int" value="31"/>
+        <value type="int" value="24"/>
+        <value type="int" value="16"/>
+        <value type="int" value="28"/>
         <value type="int" value="18"/>
         <value type="int" value="17"/>
         <value type="int" value="19"/>
         <value type="int" value="9"/>
         <value type="int" value="21"/>
+        <value type="int" value="25"/>
+        <value type="int" value="35"/>
         <value type="int" value="12"/>
+        <value type="int" value="27"/>
         <value type="int" value="13"/>
-        <value type="int" value="14"/>
       </property>
       <property name="horizontal" type="bool" value="false"/>
       <property name="length-adjust" type="bool" value="true"/>
@@ -57,17 +67,23 @@
     <property name="plugin-4" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>
     </property>
-    <property name="plugin-5" type="string" value="clock"/>
+    <property name="plugin-5" type="string" value="clock">
+      <property name="digital-format" type="string" value="%R - %d.%m.%Y"/>
+    </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="kteatime"/>
+        <value type="string" value="thunar"/>
         <value type="string" value="zwischenablage"/>
         <value type="string" value="skype"/>
         <value type="string" value="benachrichtigungsdienst für aktualisierungen"/>
         <value type="string" value="orage"/>
+        <value type="string" value="gigolo"/>
         <value type="string" value="clipman"/>
+        <value type="string" value="dropbox"/>
         <value type="string" value="notizen"/>
         <value type="string" value="netzwerk-manager-applet"/>
+        <value type="string" value="alarm clock"/>
         <value type="string" value="notes"/>
         <value type="string" value="kerneloops-applet"/>
       </property>
@@ -91,20 +107,12 @@
         <value type="string" value="13518073794.desktop"/>
       </property>
     </property>
-    <property name="plugin-13" type="string" value="separator">
-      <property name="style" type="uint" value="1"/>
-    </property>
     <property name="plugin-14" type="string" value="directorymenu">
-      <property name="base-directory" type="string" value="/home/sxs"/>
+      <property name="base-directory" type="string" value="/home"/>
     </property>
     <property name="plugin-15" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="13518530441.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-16" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="13529014782.desktop"/>
       </property>
     </property>
     <property name="plugin-17" type="string" value="launcher">
@@ -147,5 +155,75 @@
         <value type="string" value="13529043772.desktop"/>
       </property>
     </property>
+    <property name="notes" type="empty">
+      <property name="global" type="empty">
+        <property name="tabs-position" type="int" value="1"/>
+        <property name="font-description" type="string" value="Droid Sans 12"/>
+        <property name="skip-taskbar-hint" type="bool" value="false"/>
+      </property>
+      <property name="new-window" type="empty">
+        <property name="width" type="int" value="300"/>
+        <property name="height" type="int" value="375"/>
+        <property name="always-on-top" type="bool" value="true"/>
+      </property>
+    </property>
+    <property name="plugin-24" type="string" value="launcher">
+      <property name="first-action" type="uint" value="2"/>
+      <property name="items" type="array">
+        <value type="string" value="13539261951.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-25" type="string" value="xfce4-dict-plugin"/>
+    <property name="plugin-27" type="string" value="screenshooter"/>
+    <property name="plugin-26" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13539262302.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-28" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13539262493.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-29" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13539262764.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-30" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13539263305.desktop"/>
+      </property>
+    </property>
+    <property name="clipman" type="empty">
+      <property name="settings" type="empty">
+        <property name="add-primary-clipboard" type="bool" value="true"/>
+        <property name="max-texts-in-history" type="uint" value="20"/>
+      </property>
+      <property name="tweaks" type="empty">
+        <property name="inhibit" type="bool" value="true"/>
+      </property>
+    </property>
+    <property name="plugin-16" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13541862321.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-31" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13541863022.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-33" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13546151272.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-35" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13546151613.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-13" type="string" value="xkb-plugin"/>
   </property>
 </channel>

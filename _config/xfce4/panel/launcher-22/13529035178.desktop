@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Exec=/usr/local/bin/sublime_text
-Icon=/usr/local/sublime-text-2/Icon/32x32/sublime_text.png
+Icon=/usr/local/sublime-text/Icon/48x48/sublime_text.png
 StartupNotify=false
 Terminal=false
 Categories=Utility;X-XFCE;X-Xfce-Toplevel;
@@ -12,4 +12,4 @@ Name[de]=Sublime Text 2
 Comment=Run a program
 Comment[de]=Best Editor
 X-XFCE-Source=file:///usr/share/applications/xfrun4.desktop
-Path=/usr/local/share/sublime-text-2
+Path=/usr/local/share/sublime-text

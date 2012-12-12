@@ -1,0 +1,20 @@
+[G0]
+timername=DS Formatierer
+time=689
+timercommand=
+timerinfo=At 11:29
+is_countdown=false
+
+[G1]
+timername=DS Kernel
+time=584
+timercommand=
+timerinfo=At 09:44
+is_countdown=false
+
+[others]
+nowin_if_alarm=false
+repeat_alarm=false
+repetitions=1
+repeat_interval=10
+

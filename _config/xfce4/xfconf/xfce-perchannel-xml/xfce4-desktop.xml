@@ -10,7 +10,7 @@
         <property name="color-style" type="empty"/>
         <property name="image-path" type="string" value="/usr/share/xfce4/backdrops/CleanBlue.jpg"/>
         <property name="image-show" type="bool" value="true"/>
-        <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/xfce4gradientcurve.png"/>
+        <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/CleanBlue.jpg"/>
         <property name="last-single-image" type="string" value="/usr/share/xfce4/backdrops/CleanBlue.jpg"/>
         <property name="saturation" type="double" value="0.500000"/>
         <property name="last-image-list" type="string" value="/home/sst/.config/xfce4/desktop/backdrop.list"/>

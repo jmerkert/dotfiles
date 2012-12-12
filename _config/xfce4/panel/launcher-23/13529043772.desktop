@@ -6,7 +6,7 @@ GenericName=Web Browser
 GenericName[de]=Web-Browser
 Comment=Access the Internet
 Comment[de]=Internetzugriff
-Exec=/usr/bin/chromium %U
+Exec=/usr/bin/chromium --proxy-server=icsrvm03.icongmbh.de:8080%U
 Terminal=false
 X-MultipleArgs=false
 Type=Application
@@ -16,3 +16,4 @@ MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme
 StartupWMClass=Chromium
 StartupNotify=true
 X-XFCE-Source=file:///usr/share/applications/chromium.desktop
+Path=
