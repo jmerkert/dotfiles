@@ -12,7 +12,7 @@ fi
 # dont nerv me!
 set bell-style none
 
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
 
 if [ -f "${HOME}/.config/golang" ] ; then
   . "${HOME}/.config/golang"
