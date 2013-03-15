@@ -17,11 +17,8 @@ if [ -d "${HOME}/Applications/UMLet" ] ; then
   export UMLET_HOME="${HOME}/Applications/UMLet"
 fi
 
-if [ -d /usr/share/maven ] ; then
-  export M2_HOME="/usr/share/maven"
-  export MAVEN_OPTS="-Xmx512m"
-  export M2="${HOME}/.m2"
-fi
+export MAVEN_OPTS="-Xmx512m"
+export M2="${HOME}/.m2"
 
 if [ -d /usr/share/ant/ ] ; then 
   export ANT_HOME="/usr/share/ant"
@@ -71,4 +68,12 @@ fi
 
 if [ -f "${HOME}/.local_exports" ] ; then
   . "${HOME}/.local_exports"
+fi
+
+if [ -f "${HOME}/.ssh/ssh-agent.pipe" ] ; then
+  export SSH_AUTH_SOCK="${HOME}/.ssh/ssh-agent.pipe"
+fi
+
+if [ -d "$HOME/Library/Haskell/bin" ] ; then 
+  export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
