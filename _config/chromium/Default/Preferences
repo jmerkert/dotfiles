@@ -1,35 +1,23 @@
 {
-   "backup": {
-      "_signature": "jdAbhuuFiHepV5OPhayU5YIfySLoyY7HrnF+FMIjgmg=",
-      "_version": 4,
-      "browser": {
-         "show_home_button": true
-      },
-      "extensions": {
-         "ids": [ "ahfgeienlihckogmohjhadlkjgocpleb" ]
-      },
-      "homepage": "http://www.debian.org",
-      "homepage_is_newtabpage": false
-   },
    "bookmark_bar": {
       "show_on_all_tabs": true
    },
    "browser": {
       "check_default_browser": false,
-      "clear_lso_data_enabled": false,
+      "clear_lso_data_enabled": true,
       "custom_chrome_frame": false,
-      "last_known_google_url": "http://www.google.de/",
-      "last_prompted_google_url": "http://www.google.de/",
+      "last_known_google_url": "https://www.google.de/",
+      "last_prompted_google_url": "https://www.google.de/",
       "pepper_flash_settings_enabled": false,
       "show_home_button": true,
       "window_placement": {
-         "bottom": 1173,
-         "left": 1941,
+         "bottom": 1171,
+         "left": 65,
          "maximized": false,
-         "right": 3789,
+         "right": 1913,
          "top": 24,
          "work_area_bottom": 1200,
-         "work_area_left": 0,
+         "work_area_left": 65,
          "work_area_right": 3840,
          "work_area_top": 24
       }
@@ -40,16 +28,20 @@
    "countryid_at_install": 21843,
    "default_apps_install_state": 2,
    "default_search_provider": {
+      "alternate_urls": [ "{google:baseURL}#q={searchTerms}", "{google:baseURL}search#q={searchTerms}", "{google:baseURL}webhp#q={searchTerms}" ],
       "enabled": true,
       "encodings": "UTF-8",
       "icon_url": "http://www.google.com/favicon.ico",
       "id": "2",
-      "instant_url": "{google:baseURL}webhp?{google:RLZ}sourceid=chrome-instant&ie={inputEncoding}{google:instantEnabledParameter}{searchTerms}",
+      "instant_url": "{google:baseURL}webhp?sourceid=chrome-instant&client=ubuntu&channel=cs&{google:RLZ}{google:instantEnabledParameter}{google:instantExtendedEnabledParameter}ie={inputEncoding}",
       "keyword": "google.de",
       "name": "Google",
       "prepopulate_id": "1",
-      "search_url": "{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:acceptedSuggestion}{google:originalQueryForSuggestion}{google:searchFieldtrialParameter}sourceid=chrome&ie={inputEncoding}",
-      "suggest_url": "{google:baseSuggestURL}search?{google:searchFieldtrialParameter}client=chrome&hl={language}&q={searchTerms}"
+      "search_url": "{google:baseURL}search?q={searchTerms}&client=ubuntu&channel=cs&{google:RLZ}{google:acceptedSuggestion}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}{google:instantExtendedEnabledParameter}ie={inputEncoding}",
+      "suggest_url": "{google:baseSuggestURL}search?{google:searchFieldtrialParameter}client=ubuntu&channel=cs&q={searchTerms}&{google:cursorPosition}sugkey={google:suggestAPIKeyParameter}"
+   },
+   "devtools": {
+      "split_location": 400
    },
    "distribution": {
       "create_all_shortcuts": true,
@@ -61,8 +53,8 @@
       "skip_first_run_ui": true
    },
    "dns_prefetching": {
-      "host_referral_list": [ 2, [ "http://get.adobe.com/", [ "http://stats.adobe.com/", 2.529573049612, "http://www.adobe.com/", 2.2086570657060003, "http://www.adobetag.com/", 2.2086570657060003, "http://wwwimages.adobe.com/", 18.896288228817994, "https://verify.adobe.com/", 2.2086570657060003 ] ], [ "http://jenkins-ci.org/", [ "http://jenkins-ci.org/", 9.870744799999997, "https://ajax.googleapis.com/", 7.2281831999999975, "https://s3.amazonaws.com/", 2.2733802, "https://twitter-badges.s3.amazonaws.com/", 2.2733802 ] ], [ "http://ox-d.adobe.com/", [ "http://ox-d.adobe.com/", 2.2086570657060003, "http://ox-i.adobe.com/", 2.2086570657060003 ] ], [ "http://stackoverflow.com/", [ "http://ajax.googleapis.com/", 1.7529842543438134, "http://careers.stackoverflow.com/", 2.007691368222829, "http://careerscdn.sstatic.net/", 2.262398482101845, "http://cdn.sstatic.net/", 2.9886194051936927, "http://edge.quantserve.com/", 1.7529842543438134, "http://engine.adzerk.net/", 3.3627332140591926, "http://stackoverflow.com/", 1.7529842543438134, "http://static.adzerk.net/", 2.771812709859876, "http://www.google-analytics.com/", 2.007691368222829, "http://www.gravatar.com/", 4.794187194059258 ] ], [ "http://www.debian.org/", [ "http://www.debian.org/", 1.096451197609263 ] ], [ "http://www.google.de/", [ "http://ssl.gstatic.com/", 0.791215739577061, "http://www.google.com/", 0.447000857197939, "http://www.google.de/", 4.27503719998572 ] ], [ "http://www.wiebetech.com/", [ "http://coolertracks.emailroi.com/", 2.2086570657060003, "http://www.cru-dataport.com/", 2.529573049612, "http://www.google-analytics.com/", 2.529573049612, "http://www.wiebetech.com/", 26.27735585865599 ] ] ],
-      "startup_list": [ 1, "http://jenkins-ci.org/", "http://jenkins.icongmbh.de:8085/", "http://jenkins:8085/", "http://ssl.gstatic.com/", "http://www.google.com/", "http://www.google.de/", "https://ajax.googleapis.com/", "https://s3.amazonaws.com/", "https://twitter-badges.s3.amazonaws.com/" ]
+      "host_referral_list": [ 2, [ "http://edge.sharethis.com/", [ "http://edge.sharethis.com/", 2.084686339270529, "http://w.sharethis.com/", 2.690492625896153 ] ], [ "http://get.adobe.com/", [ "http://stats.adobe.com/", 2.127083409456189, "http://www.adobe.com/", 1.8572295440774185, "http://www.adobetag.com/", 1.8572295440774185, "http://wwwimages.adobe.com/", 15.889630543773466, "https://verify.adobe.com/", 1.8572295440774185 ] ], [ "http://java.net/", [ "http://asset-0.java.net/", 2.387589482583341, "http://asset-1.java.net/", 2.9933957692089646, "http://asset-2.java.net/", 2.9933957692089646, "http://asset-3.java.net/", 5.416620915711458, "http://edge.sharethis.com/", 2.387589482583341, "http://l.sharethis.com/", 2.084686339270529, "http://seg.sharethis.com/", 2.387589482583341, "http://w.sharethis.com/", 3.2962989125217765, "http://wd-edge.sharethis.com/", 2.084686339270529 ] ], [ "http://jenkins-ci.org/", [ "http://jenkins-ci.org/", 8.300174413336832, "https://ajax.googleapis.com/", 6.078080475908073, "https://s3.amazonaws.com/", 1.9116543432291524, "https://twitter-badges.s3.amazonaws.com/", 1.9116543432291524 ] ], [ "http://kohsuke.org/", [ "http://api.twitter.com/", 1.7757251330914605, "http://i.imgur.com/", 1.575809058505005, "http://kohsuke.org/", 6.373794848579945, "http://platform.twitter.com/", 5.774046624820578, "http://syndication.twimg.com/", 1.3758929839185492, "http://upload.wikimedia.org/", 1.575809058505005, "http://www.google-analytics.com/", 1.7757251330914605, "https://si0.twimg.com/", 1.7757251330914605 ] ], [ "http://localhost/", [ "http://localhost/", 36.76596420615505 ] ], [ "http://ox-d.adobe.com/", [ "http://ox-d.adobe.com/", 1.8572295440774185, "http://ox-i.adobe.com/", 1.8572295440774185 ] ], [ "http://platform.twitter.com/", [ "http://cdn.api.twitter.com/", 0.5335870766628383, "http://p.twitter.com/", 0.5586232179299048, "https://r.twimg.com/", 0.6905678271569655 ] ], [ "http://seg.sharethis.com/", [ "http://b.scorecardresearch.com/", 2.387589482583341 ] ], [ "http://stackoverflow.com/", [ "http://ajax.googleapis.com/", 1.474060504014537, "http://careers.stackoverflow.com/", 1.6882402353670762, "http://careerscdn.sstatic.net/", 1.9024199667196162, "http://cdn.sstatic.net/", 2.513089216751975, "http://edge.quantserve.com/", 1.474060504014537, "http://engine.adzerk.net/", 2.827676406162587, "http://stackoverflow.com/", 1.474060504014537, "http://static.adzerk.net/", 2.330779429424695, "http://www.google-analytics.com/", 1.6882402353670762, "http://www.gravatar.com/", 4.031366496363858 ] ], [ "http://stapler.kohsuke.org/", [ "http://stapler.kohsuke.org/", 4.774466251888298 ] ], [ "http://www.4jz.de/", [ "http://hotel4jz.de/", 2.1457765990453503, "http://maps.google.com/", 2.1457765990453503, "http://www.4jz.de/", 6.8224691867082905, "http://www.google-analytics.com/", 2.1457765990453503 ] ], [ "http://www.debian.org/", [ "http://www.debian.org/", 2.3000041935799755 ] ], [ "http://www.google.de/", [ "http://id.google.de/", 2.084686339270529, "http://ssl.gstatic.com/", 1.0449191386227854, "http://www.google.com/", 0.5509819054394163, "http://www.google.de/", 11.459675737517964 ] ], [ "http://www.staplercenter-pieckert.de/", [ "http://www.google-analytics.com/", 1.878712201817817, "http://www.kaeuferportal.de/", 1.3758929839185492, "http://www.staplercenter-pieckert.de/", 6.688814117625268 ] ], [ "http://www.wiebetech.com/", [ "http://coolertracks.emailroi.com/", 1.8572295440774185, "http://www.cru-dataport.com/", 2.127083409456189, "http://www.google-analytics.com/", 2.127083409456189, "http://www.wiebetech.com/", 22.096269447485177 ] ], [ "https://www.google.de/", [ "https://ssl.gstatic.com/", 2.4575561048895462, "https://www.google.com/", 2.1457765990453503, "https://www.google.de/", 4.640012645798919 ] ] ],
+      "startup_list": [ 1, "http://icub64dt01.icongmbh.de/", "http://localhost/", "http://sonaggregate.icongmbh.de/" ]
    },
    "download": {
       "directory_upgrade": true,
@@ -70,16 +62,17 @@
    },
    "extensions": {
       "autoupdate": {
-         "last_check": "12999200360422496",
-         "next_check": "12999216983734745"
+         "last_check": "13009473103922912",
+         "next_check": "13009491944410938"
       },
       "blacklistupdate": {
-         "lastpingday": "12999168001848032",
-         "version": "0.0.0.136"
+         "lastpingday": "13009446001106345",
+         "version": "0.0.0.143"
       },
       "chrome_url_overrides": {
          "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
       },
+      "last_chrome_version": "25.0.1364.160",
       "settings": {
          "aakhlmakppmkkmfkoibponkmmpgpmjgl": {
             "blacklist": true
@@ -91,6 +84,12 @@
             "blacklist": true
          },
          "abfclfmhaemoockhhinpplncjehfpdbd": {
+            "blacklist": true
+         },
+         "abidmaanmbfeddegmapgpjhdmgjaloen": {
+            "blacklist": true
+         },
+         "acchaoeabgiclhngknbkegekbfphgndl": {
             "blacklist": true
          },
          "acmpfcamncegnhjdeiodgilikjafcamg": {
@@ -117,12 +116,39 @@
          "agmhonoepgcnakccfpidhjehlocaeaaj": {
             "blacklist": true
          },
+         "agodbcffjkjcnceklapkjfcmkfepmbgm": {
+            "blacklist": true
+         },
          "ahfgeienlihckogmohjhadlkjgocpleb": {
             "active_permissions": {
                "api": [ "appNotifications", "management", "webstorePrivate" ]
             },
             "app_launcher_ordinal": "n",
-            "page_ordinal": "n"
+            "creation_flags": 1,
+            "from_bookmark": false,
+            "from_webstore": false,
+            "install_time": "13009471821991191",
+            "location": 5,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "web_url": "https://chrome.google.com/webstore"
+                  },
+                  "urls": [ "https://chrome.google.com/webstore" ]
+               },
+               "description": "Web Store",
+               "icons": {
+                  "128": "webstore_icon_128.png",
+                  "16": "webstore_icon_16.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtl3tO0osjuzRsf6xtD2SKxPlTfuoy7AWoObysitBPvH5fE1NaAA1/2JkPWkVDhdLBWLaIBPYeXbzlHp3y4Vv/4XG+aN5qFE3z+1RU/NqkzVYHtIpVScf3DjTYtKVL66mzVGijSoAIwbFCC3LpGdaoe6Q1rSRDp76wR6jjFzsYwQIDAQAB",
+               "name": "Chrome Web Store",
+               "permissions": [ "appNotifications", "webstorePrivate", "management" ],
+               "version": "0.1"
+            },
+            "page_ordinal": "n",
+            "path": "/usr/lib/chromium-browser/resources/web_store",
+            "was_installed_by_default": false
          },
          "ahjfgnikolodijnpakeknpilnemojlhc": {
             "blacklist": true
@@ -137,6 +163,12 @@
             "blacklist": true
          },
          "ajlkjjdbgcjdiklbcomhnfghjigfccoh": {
+            "blacklist": true
+         },
+         "ajneiojjdhceikkgmhnjhgaacpfhldpi": {
+            "blacklist": true
+         },
+         "akadaakimgegecohlifeejdnnjbnobop": {
             "blacklist": true
          },
          "akbdojiajlefghcdclgkgmbbljamgehd": {
@@ -169,13 +201,28 @@
          "aojicjocmihiopalnhjikigammkhgckb": {
             "blacklist": true
          },
+         "aokenbhllkgpooaacldiamnpmmgkjblo": {
+            "blacklist": true
+         },
+         "apdebchnkegjokdjplmfmepcdgneemhe": {
+            "blacklist": true
+         },
          "apdmgffkfhjfeejmbjidennfjdkmmmbl": {
             "blacklist": true
          },
          "aphncaagnlabkeipnbbicmcahnamibgb": {
             "blacklist": true
          },
+         "bandboadndbkchlpicmfkpoedgnocblf": {
+            "blacklist": true
+         },
+         "bccdgfmbcjkfkinkkagaflgdaoaamogo": {
+            "blacklist": true
+         },
          "bcddmcejgphfgofbpoocakaeapfomlek": {
+            "blacklist": true
+         },
+         "bckhfnghfdponbaldednpnljadgfjecj": {
             "blacklist": true
          },
          "bdgijcibmhjjccgbdohofncdjcophknj": {
@@ -185,6 +232,12 @@
             "blacklist": true
          },
          "bhdkpmneahdelgdgfhddianklldfoell": {
+            "blacklist": true
+         },
+         "bhmahaiplmeodpakkcchmolaihbhkpdl": {
+            "blacklist": true
+         },
+         "biiponhbbifajapmbggbgaepiedinifm": {
             "blacklist": true
          },
          "bilgncckogfgfipdlejkffnbkgjkmflh": {
@@ -208,6 +261,9 @@
          "bldgnkigdcpgnbfehgbameigoohecdfl": {
             "blacklist": true
          },
+         "bmjhmeeepkkbmjdajachipfgihmpokpd": {
+            "blacklist": true
+         },
          "bndahdijlcnncjbpammoedeapmlobllc": {
             "blacklist": true
          },
@@ -221,6 +277,12 @@
             "blacklist": true
          },
          "bokkificjhapflinbdejegngffgkcgfe": {
+            "blacklist": true
+         },
+         "bpfadpmhabiajakhgnaipdplkcjaklnj": {
+            "blacklist": true
+         },
+         "canhmdgddepdjikkjhpmhcfdkkjdbppi": {
             "blacklist": true
          },
          "caphkimknlmnhpjoneddiaakmcaajagb": {
@@ -241,6 +303,9 @@
          "cdogaeccgljmkecjmoedambgiekkllij": {
             "blacklist": true
          },
+         "cedclbokcakighlpbnbhfjffdjeihfdp": {
+            "blacklist": true
+         },
          "cekdjgnecpoooikhmceokdhojckkkhmh": {
             "blacklist": true
          },
@@ -250,6 +315,9 @@
          "cfbdodejdeejbkffcmiaknpmojjeibpn": {
             "blacklist": true
          },
+         "cfnfobbpdaccoljfahpmfjdmbfmmkeof": {
+            "blacklist": true
+         },
          "cfogpbanfnocakdckmgafapdlmclpiln": {
             "blacklist": true
          },
@@ -257,6 +325,12 @@
             "blacklist": true
          },
          "cgnkbnaiipmfbakpmhllalggoepniemh": {
+            "blacklist": true
+         },
+         "chhniecmnighakmlnhkifeogjddhoajn": {
+            "blacklist": true
+         },
+         "cidnoinjdbalndcidafahfnoeehfblfl": {
             "blacklist": true
          },
          "cihlkpohodpdkdnfalhdkhhlhmhffmbe": {
@@ -286,7 +360,13 @@
          "cmlokmkdolieoaoddlfhaidnlmiadhik": {
             "blacklist": true
          },
+         "cmnfphnmpedeolmelllmgkghmjcnlajp": {
+            "blacklist": true
+         },
          "cnimdnlablahacgompaahbgohcokcclp": {
+            "blacklist": true
+         },
+         "cniodhfhdiidogekcjkplecimemfocpn": {
             "blacklist": true
          },
          "coajchbkdbfhmhbgcjepiofllfjjcpfp": {
@@ -313,6 +393,12 @@
          "dbmdicehacbaohlockjgdglcobimmjkh": {
             "blacklist": true
          },
+         "dcfefnkefopibnlcjhjcfegckhanekld": {
+            "blacklist": true
+         },
+         "dcpjokbfgfnbaekphjgehhjaokkcifbj": {
+            "blacklist": true
+         },
          "dejippphmhbpgckbhdidnjmdcpfccbaj": {
             "blacklist": true
          },
@@ -323,6 +409,9 @@
             "blacklist": true
          },
          "dfafokiagoiocidlpglcanjkcdbdnioi": {
+            "blacklist": true
+         },
+         "dfjhgoeofgmepmcngkhnaiphbhdbonhp": {
             "blacklist": true
          },
          "dfoegfajplmijblljfancdapbdaopebb": {
@@ -340,6 +429,18 @@
          "dhclobcklknojliojkkclgjndemadnig": {
             "blacklist": true
          },
+         "dhdepfaagokllfmhfbcfmocaeigmoebo": {
+            "blacklist": true
+         },
+         "dhmghpedmigfknfpolfmkihcaeiccjgf": {
+            "blacklist": true
+         },
+         "dibljdngacjhpccjckmlmeklpgjeinjd": {
+            "blacklist": true
+         },
+         "digmihafmlfkgdbjjdgbcojghcgcoeoa": {
+            "blacklist": true
+         },
          "diinokaoicgobepmadnmedlhdfnpehcj": {
             "blacklist": true
          },
@@ -349,10 +450,16 @@
          "djnahdkbfgnhgpakidinfonfcjbagkgp": {
             "blacklist": true
          },
+         "djpnjilhooodipllnjedjeiabkboakok": {
+            "blacklist": true
+         },
          "dkhkecikbdfpoiopnnpoeglbdphgflmf": {
             "blacklist": true
          },
          "dlobhinihbmedmheccecfnkcadpehmbf": {
+            "blacklist": true
+         },
+         "dlopielgodpjhkbapdlbbicpiefpaack": {
             "blacklist": true
          },
          "dmabikjmolgegjajdhmgpmgffajlmmkb": {
@@ -373,6 +480,12 @@
          "doneghboglgnflpdicnkaojmmljgejkj": {
             "blacklist": true
          },
+         "dpaphgcjeeochbiafgbochohgmpcmlbj": {
+            "blacklist": true
+         },
+         "dpfanoongnoofcdhgijjdjmbnfekdejj": {
+            "blacklist": true
+         },
          "dpgenihgggagjjggfocjceeobjkadcbc": {
             "blacklist": true
          },
@@ -382,22 +495,60 @@
          "ebdcdchjcndpjhehacedepnggfdbfkpn": {
             "blacklist": true
          },
+         "ebhdpnhjbfkchfamjcpebpeddhhicnab": {
+            "blacklist": true
+         },
          "echjhfifjidfhoappglfmoffcpmpkigb": {
             "blacklist": true
          },
          "echngajnlpjeacbanjejlhcajjfoedcc": {
             "blacklist": true
          },
+         "ecinfbhalenfhdhnljmkglajfjjfehoj": {
+            "blacklist": true
+         },
          "edmnikahahfkfilbbjbdoiabnghbkmjc": {
             "blacklist": true
          },
+         "eemcgdkfndhakfknompkggombfjjjeno": {
+            "active_permissions": {
+               "api": [ "bookmarks", "bookmarkManagerPrivate", "systemPrivate", "tabs" ],
+               "explicit_host": [ "chrome://favicon/*", "chrome://resources/*" ]
+            },
+            "creation_flags": 1,
+            "from_bookmark": false,
+            "from_webstore": false,
+            "install_time": "13009471821990145",
+            "location": 5,
+            "manifest": {
+               "chrome_url_overrides": {
+                  "bookmarks": "main.html"
+               },
+               "content_security_policy": "object-src 'none'; script-src chrome://resources 'self'",
+               "description": "Bookmark Manager",
+               "incognito": "split",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQcByy+eN9jzazWF/DPn7NW47sW7lgmpk6eKc0BQM18q8hvEM3zNm2n7HkJv/R6fU+X5mtqkDuKvq5skF6qqUF4oEyaleWDFhd1xFwV7JV+/DU7bZ00w2+6gzqsabkerFpoP33ZRIw7OviJenP0c0uWqDWF8EGSyMhB3txqhOtiQIDAQAB",
+               "manifest_version": 2,
+               "name": "Bookmark Manager",
+               "permissions": [ "bookmarks", "bookmarkManagerPrivate", "systemPrivate", "tabs", "chrome://favicon/", "chrome://resources/" ],
+               "version": "0.1"
+            },
+            "path": "/usr/lib/chromium-browser/resources/bookmark_manager",
+            "was_installed_by_default": false
+         },
          "efbeabpbbkahnnjalakldjfhljboclkf": {
+            "blacklist": true
+         },
+         "efcnjdcimjmggfdkahncpoikhehcfgnh": {
             "blacklist": true
          },
          "efhjelcghjkfigiagdfbfilndaffpmdj": {
             "blacklist": true
          },
          "efnaljpgehfilpmkhobibbjceeeondmn": {
+            "blacklist": true
+         },
+         "efonemhbokfedckpfpohpmcamfihnnlm": {
             "blacklist": true
          },
          "egljdhfnbjahogjahnigfnbpidlmdagi": {
@@ -419,6 +570,9 @@
             "blacklist": true
          },
          "eijbdinddjecmebnlienfoijpjjobkjh": {
+            "blacklist": true
+         },
+         "einmhcleeonenkkldjlmhhcmgolhblhh": {
             "blacklist": true
          },
          "ejakhnjbomgngodiidgbkapjgbdckhnh": {
@@ -454,6 +608,9 @@
          "fbjjhbijaiopkcdolheliknnjlkaekeb": {
             "blacklist": true
          },
+         "fbmgoajoadbjhoachcdiplofcblaihdc": {
+            "blacklist": true
+         },
          "fcfepemfihgibdacjlnlecebknaaepmj": {
             "blacklist": true
          },
@@ -466,6 +623,9 @@
          "fhlkffpjoajppmhcakbkjndbjfljccpi": {
             "blacklist": true
          },
+         "fhpclkemjlhmbfbjakbmdjihocinkmim": {
+            "blacklist": true
+         },
          "fiapkdjniadkodmdibdnchoifkpfoiid": {
             "blacklist": true
          },
@@ -475,10 +635,19 @@
          "fihepkmlkmciffbhijldnpmifhbkiinp": {
             "blacklist": true
          },
+         "fiiblakkkkgeljngobmpeljjapemenhi": {
+            "blacklist": true
+         },
          "fjhfnfakmfcejgmfkmnapemgblmehppf": {
             "blacklist": true
          },
          "fjjeecfjmgfnleghoellhldedkaocjfc": {
+            "blacklist": true
+         },
+         "fjpofaghniailakahnhkjjfbfonpfglo": {
+            "blacklist": true
+         },
+         "flalbhkmnijcnpialgakicllnabckmhi": {
             "blacklist": true
          },
          "fleljamdchegbjeiipbnmiebnhgheeld": {
@@ -511,10 +680,16 @@
          "foenbafkkmajnmfnlcmejonkfaipdmme": {
             "blacklist": true
          },
+         "folhciaicehdnoalhbkbgkakfcockopc": {
+            "blacklist": true
+         },
          "fomljmklmcefndkgpakgifbiiidgbjej": {
             "blacklist": true
          },
          "fommcgokigkhmnhlhlkckfjhefnmfohd": {
+            "blacklist": true
+         },
+         "fopgndklnkecillfbdmfknhmadmenikm": {
             "blacklist": true
          },
          "fpbippbofbmgmbojjmgfcifpmdaelcmd": {
@@ -544,7 +719,16 @@
          "gbenikfjhilhpgagllmfgggdjaflbmbi": {
             "blacklist": true
          },
+         "gchbiabnbdikkgfhnkclecjncojnkmhb": {
+            "blacklist": true
+         },
          "gdggdkkjecogagaffaemnbfmllcoihjp": {
+            "blacklist": true
+         },
+         "gdlgbpbmiiagaikjbednkikinokbkbcb": {
+            "blacklist": true
+         },
+         "geggofhlfbcmanadhknllmlajiafopoh": {
             "blacklist": true
          },
          "gekkhpjigmckhgmgngadbeknekgpgolb": {
@@ -574,6 +758,9 @@
          "gjmhdmobkhfhkpfmfegnkkimlamjdldi": {
             "blacklist": true
          },
+         "gkcfodgjdcijjlliehfhgohlkemcbobl": {
+            "blacklist": true
+         },
          "gkhbgnodbilglgholifcjdblbgdaieah": {
             "blacklist": true
          },
@@ -581,6 +768,9 @@
             "blacklist": true
          },
          "gkjmgdpdndoaiholejnmdbbpdaafahmm": {
+            "blacklist": true
+         },
+         "gklphmokmaaepjgandocpneomjlidjag": {
             "blacklist": true
          },
          "glhhlafadlhkgbklgbjnmblfhnkfknbm": {
@@ -595,6 +785,9 @@
          "gncfgndgeoddelbfhlndhljnecoednaa": {
             "blacklist": true
          },
+         "gngfmjidncdccdlfjcjbnngeaaclfgpl": {
+            "blacklist": true
+         },
          "gngmkbiihflpghldjnbpemaicedhdddk": {
             "blacklist": true
          },
@@ -602,6 +795,15 @@
             "blacklist": true
          },
          "goedioiidkokkbobdnopnlnaaalniegm": {
+            "blacklist": true
+         },
+         "gomkbnfeifchddfokcicibjnlgbolhol": {
+            "blacklist": true
+         },
+         "gompblemgafijijmlgbaepcijfgfgljf": {
+            "blacklist": true
+         },
+         "gpdcodmabpgmncbkhpipakhehepmpopk": {
             "blacklist": true
          },
          "gpgehbjbkfhngdlfpfeokjgbkmmokjhe": {
@@ -712,6 +914,9 @@
          "hpcdoodjfcmpcpkeendjnjkeinimhkih": {
             "blacklist": true
          },
+         "hphibigbodkkohoglgfkddblldpfohjl": {
+            "blacklist": true
+         },
          "hpibmhghjndideebpackbdlpncgkcppp": {
             "blacklist": true
          },
@@ -725,6 +930,9 @@
             "blacklist": true
          },
          "idbdlnkdnaodonmgnimcfelpngbmcpjk": {
+            "blacklist": true
+         },
+         "iedogbkombgmapifenoojnmpcnjighfm": {
             "blacklist": true
          },
          "iemfpgbdjfoihicbocpbjppipdbfimeh": {
@@ -781,6 +989,9 @@
          "imkffpjpdngdkpgadcmnlkhhmhdocijn": {
             "blacklist": true
          },
+         "inbhlfpapeikbbgpfionabkigakepbbm": {
+            "blacklist": true
+         },
          "indfhnliadamglhalanplbajgenpjdml": {
             "blacklist": true
          },
@@ -794,6 +1005,9 @@
             "blacklist": true
          },
          "jaejgaoiipdjjlbnapngknalafalbkej": {
+            "blacklist": true
+         },
+         "jafnimahlamccccjbkhjjpeiipiedpik": {
             "blacklist": true
          },
          "janhdpmhnighonkkbkdpnljcoenpfkbh": {
@@ -841,6 +1055,9 @@
          "jhhabiomopkibeecgngiggmopkeofacl": {
             "blacklist": true
          },
+         "jihmekmccilkocefjpejdebpapohlhjb": {
+            "blacklist": true
+         },
          "jindbcpkhnnnjgcjgmkjedbibibiojjf": {
             "blacklist": true
          },
@@ -868,6 +1085,9 @@
          "jmifipgdcllamghkhdplfjffkciekbgo": {
             "blacklist": true
          },
+         "jolgdmpdhloiienhblmiimamomhdphlk": {
+            "blacklist": true
+         },
          "jpehgolpfgnknboibogccapmdcadjkbd": {
             "blacklist": true
          },
@@ -877,10 +1097,16 @@
          "jpgidahfcgiajlcbleeiaibpmmblcmnb": {
             "blacklist": true
          },
+         "jpiedgcdjigcoeagojmlokclbljokpon": {
+            "blacklist": true
+         },
          "jpkdlckejfjidmplieobnhijmoiecbhl": {
             "blacklist": true
          },
          "kbipembkfhbdmkkkfbigmohilmknjnof": {
+            "blacklist": true
+         },
+         "kbmkecfipofebpaikgifajmahdmadlnb": {
             "blacklist": true
          },
          "kcanfkmhccbaheheaackijegkclkaeic": {
@@ -895,10 +1121,22 @@
          "kdchmeaiapjkejkcbeclgjklemecieeg": {
             "blacklist": true
          },
+         "kdcnnmifdmlmjffdgeieikcokcogpbej": {
+            "blacklist": true
+         },
          "kdfahjokahcbmecgaandpobmgiiknagf": {
             "blacklist": true
          },
+         "kdicckonacionpoompfoopggkgimjpcb": {
+            "blacklist": true
+         },
          "kdjhalklkkcmodeicjiaekcgifkcepaf": {
+            "blacklist": true
+         },
+         "kdpcgcpfnkolljkhgdbbgimplfkhakec": {
+            "blacklist": true
+         },
+         "keknhkokjnjhgpcofobpcbelddppeolp": {
             "blacklist": true
          },
          "kelcbonmemlciepjdmfcifnhloeammhj": {
@@ -907,7 +1145,13 @@
          "kelljdoinjlkmkncffgadbebgpmlcang": {
             "blacklist": true
          },
+         "keoimpnicgbcjamfdgpcecihicnbmhej": {
+            "blacklist": true
+         },
          "kffhenjbibjnbnjhlkcdlmpeccpaohio": {
+            "blacklist": true
+         },
+         "kfodnkhdfdgeaegehjjnkjkieloddelg": {
             "blacklist": true
          },
          "kgbkdabomfdpfoibliicpmibceaoohgh": {
@@ -922,16 +1166,25 @@
          "kgdmldjagfciieddcnlhampgkajkpanc": {
             "blacklist": true
          },
+         "khgjomcpjblpoaipanicbfjfgcfbpegp": {
+            "blacklist": true
+         },
          "kibgmcdcfmcglajcfbecilngejnfppjp": {
             "blacklist": true
          },
          "kiipngoehgkgkackngaidmhmnchfbmio": {
             "blacklist": true
          },
+         "kincjchfokkeneeofpeefomkikfkiedl": {
+            "blacklist": true
+         },
          "kinhljbhjmcmoddhdoodekeklmjapjff": {
             "blacklist": true
          },
          "kkhomejdleoonmbdhcigkhkjcghngncf": {
+            "blacklist": true
+         },
+         "kkkeikdkpjenmoiicggnnodbkebafgpc": {
             "blacklist": true
          },
          "kleaapgdkahaekcocmkbgfainbhihccj": {
@@ -947,6 +1200,12 @@
             "blacklist": true
          },
          "kolbbghckjilleabphhgeggcgpfidofi": {
+            "blacklist": true
+         },
+         "kpbfifeiomkhocgkkffocfinoedcjebg": {
+            "blacklist": true
+         },
+         "laicaenbonaajhkmfhhbpiapobdieffm": {
             "blacklist": true
          },
          "lambangeielkjcnmioccboaphdfcffib": {
@@ -1000,6 +1259,9 @@
          "ljeihpebkahejeacdalhkhmckmggppif": {
             "blacklist": true
          },
+         "ljlppmpjdogefnanekncklkjgpnhpcpd": {
+            "blacklist": true
+         },
          "ljmjoloiepllcndinchenhomcdcgbgef": {
             "blacklist": true
          },
@@ -1013,6 +1275,9 @@
             "blacklist": true
          },
          "lljnngafekbnkpdfophmcdlbfebcbcld": {
+            "blacklist": true
+         },
+         "lmhdacagnmfmomeodbgmlghejdbmldge": {
             "blacklist": true
          },
          "lnahlgmhpghkhmafjppdidhcoaomipfg": {
@@ -1057,6 +1322,9 @@
          "maakimnachffhlgdhfomaejeeaikgjap": {
             "blacklist": true
          },
+         "mafccdbbhekjhemajjejkaidndokeena": {
+            "blacklist": true
+         },
          "magllcifjcllaafcdplnajmobccbcdlo": {
             "blacklist": true
          },
@@ -1084,6 +1352,32 @@
          "megkcfpbmemnpkgadkoompnoajcolpni": {
             "blacklist": true
          },
+         "mfehgcgbbipciphmccgaenjidiccnmng": {
+            "active_permissions": {
+               "api": [ "cloudPrintPrivate" ]
+            },
+            "creation_flags": 1,
+            "from_bookmark": false,
+            "from_webstore": false,
+            "install_time": "13009471821990833",
+            "location": 5,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "web_url": "https://www.google.com/cloudprint"
+                  },
+                  "urls": [ "https://www.google.com/cloudprint", "https://www.google.com/cloudprint/enable_chrome_connector" ]
+               },
+               "description": "Cloud Print",
+               "display_in_launcher": false,
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqOhnwk4+HXVfGyaNsAQdU/js1Na56diW08oF1MhZiwzSnJsEaeuMN9od9q9N4ZdK3o1xXOSARrYdE+syV7Dl31nf6qz3A6K+D5NHe6sSB9yvYlIiN37jdWdrfxxE0pRYEVYZNTe3bzq3NkcYJlOdt1UPcpJB+isXpAGUKUvt7EQIDAQAB",
+               "name": "Cloud Print",
+               "permissions": [ "cloudPrintPrivate" ],
+               "version": "0.1"
+            },
+            "path": "/usr/lib/chromium-browser/resources/cloud_print",
+            "was_installed_by_default": false
+         },
          "mfffdpnblflpobcnekhekiahepofaane": {
             "blacklist": true
          },
@@ -1102,10 +1396,16 @@
          "mhbffdldpckobeihgebaamjalehefnia": {
             "blacklist": true
          },
+         "mickhiflmjglhpdpfigpkpjiipfdlphj": {
+            "blacklist": true
+         },
          "mjalegijammcloleihdmooifidcjggjp": {
             "blacklist": true
          },
          "mjgobkikdipfikmaoakdcdbicpioljgg": {
+            "blacklist": true
+         },
+         "mjhlngjakabhonjagnlimeicooahajpl": {
             "blacklist": true
          },
          "mjolnadmlahbpepjaemohnkhpjkbhmef": {
@@ -1121,6 +1421,9 @@
             "blacklist": true
          },
          "mlmmbepkgelpbenpobinockmiehdahai": {
+            "blacklist": true
+         },
+         "mlnndjkcclbekgoebkenkdgiggaomaed": {
             "blacklist": true
          },
          "mlnoedbhndgbjcbeadjfnmjloejlgojk": {
@@ -1144,6 +1447,9 @@
          "mogepbcllienegdibkfpmombhefhcoic": {
             "blacklist": true
          },
+         "mokdlfbphidpiopnlfejpcmadcbomckn": {
+            "blacklist": true
+         },
          "mpgehpkneknbopplhmmkfijfiniddipf": {
             "blacklist": true
          },
@@ -1154,6 +1460,9 @@
             "blacklist": true
          },
          "naopgnjebjeeedbbhcadkhkmeefmloho": {
+            "blacklist": true
+         },
+         "nbfcehkihbmpebblmfkihadebllgfmgl": {
             "blacklist": true
          },
          "nbieffehfdniifkgdckbndjhojohbfjj": {
@@ -1187,6 +1496,9 @@
             "blacklist": true
          },
          "nhkmojkfnknbbmhbnacjdlodokeophkl": {
+            "blacklist": true
+         },
+         "nhooocacdhkpbmoocdclodjlddcebfoe": {
             "blacklist": true
          },
          "nibohffepnilngkecenfdgnokfhmnkod": {
@@ -1240,7 +1552,13 @@
          "oanjogmonneelfpnfmdlalfddkeckdej": {
             "blacklist": true
          },
+         "obfnipbbnnhkbafmdbbfpgfgbjmmkgpm": {
+            "blacklist": true
+         },
          "obgljnmbldahelaakfdbjkplokjoneip": {
+            "blacklist": true
+         },
+         "oblicopoaionpjoapgjmmoncjadpdioh": {
             "blacklist": true
          },
          "ocmhjnhildbnglmlfimkjnnfgddelacb": {
@@ -1252,7 +1570,13 @@
          "odeckaficnaplobiiaomegfbokokehhb": {
             "blacklist": true
          },
+         "odefpckfdnfkeandbeccopcpncnbkonn": {
+            "blacklist": true
+         },
          "odnamglmogfldajnhkfodmloofeokcmm": {
+            "blacklist": true
+         },
+         "oelhhkgiajkjfbccafjgggcpkbkjgpij": {
             "blacklist": true
          },
          "oghphhcagopecifjblgdcfihjnlcbcfc": {
@@ -1265,6 +1589,9 @@
             "blacklist": true
          },
          "oilfokmpgejhjhecdjjpikloibggpenf": {
+            "blacklist": true
+         },
+         "oimplfccampifgkgndlamabnkcibkngc": {
             "blacklist": true
          },
          "ojglppmhgfohhfeinlhklglifnbfebak": {
@@ -1315,6 +1642,12 @@
          "pcaedgdgamlfffkfblocmakhgieggoak": {
             "blacklist": true
          },
+         "pcojpoljjgnicbhaffkiphphplijgbcc": {
+            "blacklist": true
+         },
+         "pdhjoamffhjhlkiiminjhmihalkfjaee": {
+            "blacklist": true
+         },
          "peahabnpipmmfiajjjhgfggbeigbmbgp": {
             "blacklist": true
          },
@@ -1325,6 +1658,9 @@
             "blacklist": true
          },
          "pfcelnbmkeoaeicedjomcjkcammlkdbk": {
+            "blacklist": true
+         },
+         "pfckhplmfbblecglndaigpojefidapai": {
             "blacklist": true
          },
          "pfgmgcnbngcnhjddppmnloflcidemopc": {
@@ -1346,6 +1682,12 @@
             "blacklist": true
          },
          "pgldfhecfiofkhnbgcncepnkjkeoahlk": {
+            "blacklist": true
+         },
+         "pgmfkblbflahhponhjmkcnpjinenhlnc": {
+            "blacklist": true
+         },
+         "pgmpnhbchhaningbkefchpdalnimjijd": {
             "blacklist": true
          },
          "phkpgooenaonkpnabopdbjjfmphclela": {
@@ -1372,6 +1714,9 @@
          "pkbkkendemaimikinaefldfljliecapm": {
             "blacklist": true
          },
+         "pkcbihpffghlanbclfmkegjmbijcpobj": {
+            "blacklist": true
+         },
          "pkdlpbfmpolnhligegklimbccminkioc": {
             "blacklist": true
          },
@@ -1379,6 +1724,9 @@
             "blacklist": true
          },
          "plfijddblbcdcnammpdmfccchkbdekmm": {
+            "blacklist": true
+         },
+         "pnaaalnkbgjaphhmahecamecmaldknkc": {
             "blacklist": true
          },
          "pnaiiipilbpcceggeanphcpkkihnojan": {
@@ -1402,6 +1750,9 @@
          "ppmfajacidhcjbddpgmcmigffpppcadd": {
             "blacklist": true
          }
+      },
+      "theme": {
+         "id": ""
       }
    },
    "homepage": "http://www.debian.org",
@@ -1423,7 +1774,7 @@
             "clients2.google.com:443": {
                "settings": {
                   "4": 100,
-                  "5": 32,
+                  "5": 10,
                   "6": 0
                },
                "supports_spdy": true
@@ -1431,18 +1782,28 @@
             "googleads.g.doubleclick.net:443": {
                "supports_spdy": true
             },
+            "r.twimg.com:443": {
+               "supports_spdy": true
+            },
             "www.google.com:443": {
                "settings": {
                   "4": 100,
-                  "5": 32,
+                  "5": 10,
                   "6": 0
+               },
+               "supports_spdy": true
+            },
+            "www.google.de:443": {
+               "settings": {
+                  "4": 100,
+                  "5": 10
                },
                "supports_spdy": true
             },
             "www.gstatic.com:443": {
                "settings": {
                   "4": 100,
-                  "5": 32,
+                  "5": 14,
                   "6": 0
                },
                "supports_spdy": true
@@ -1453,12 +1814,12 @@
    },
    "ntp": {
       "app_page_names": [ "Apps" ],
-      "promo_resource_cache_update": "1354726388.227263"
+      "promo_resource_cache_update": "1364998227.233232"
    },
    "plugins": {
       "enabled_internal_pdf3": true,
       "enabled_nacl": true,
-      "last_internal_directory": "/usr/lib/chromium",
+      "last_internal_directory": "/usr/lib/chromium-browser",
       "plugins_list": [ {
          "enabled": true,
          "name": "Remoting Viewer",
@@ -1467,7 +1828,8 @@
       }, {
          "enabled": true,
          "name": "Remoting Viewer"
-      } ]
+      } ],
+      "removed_old_component_pepper_flash_settings": true
    },
    "profile": {
       "avatar_index": 0,
@@ -1475,6 +1837,7 @@
          "clear_on_exit_migrated": true,
          "pref_version": 1
       },
+      "exit_type": "Normal",
       "exited_cleanly": true,
       "local_profile_id": 12662156,
       "name": "First user"
@@ -1486,10 +1849,12 @@
       "suppress_start": true
    },
    "translate_accepted_count": {
-      "de": 0
+      "de": 0,
+      "en": 0
    },
    "translate_denied_count": {
-      "de": 1
+      "de": 1,
+      "en": 1
    },
    "translate_language_blacklist": [ "de" ]
 }

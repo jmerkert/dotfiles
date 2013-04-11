@@ -1,3 +1,4 @@
+
 [home on icsrv23]
 host=icsrv23.icongmbh.de
 folder=Sven.Strittmatter
@@ -5,7 +6,6 @@ user=sven.strittmatter
 scheme=smb
 share=HOME$
 domain=ICONGMBH
-path=
 autoconnect=1
 
 [icondata on icsrv23]

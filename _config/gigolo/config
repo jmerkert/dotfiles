@@ -1,9 +1,10 @@
+
 [general]
 file_manager=gvfs-open
 autoconnect_interval=60
 
 [ui]
-geometry=2528;370;944;625;0;
+geometry=1958;337;944;625;0;
 save_geometry=true
 show_in_systray=true
 start_in_systray=true
@@ -12,5 +13,5 @@ toolbar_style=0
 toolbar_orientation=0
 view_mode=0
 show_panel=true
-last_panel_page=0
+last_panel_page=1
 show_autoconnect_errors=true
