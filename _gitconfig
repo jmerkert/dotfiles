@@ -9,7 +9,7 @@
 
 [core]
   editor   = nano
-  autocrlf = false
+  autocrlf = input
   excludesfile = ~/.gitignore_global
 
 [merge]
@@ -25,8 +25,8 @@
 
 [user]
 	name = Weltraumschaf
-  email = ich@weltraumschaf.de
+    email = ich@weltraumschaf.de
 
 [github]
-  user  = Weltraumschaf
-  token = xxx
+    user  = Weltraumschaf
+    token = xxx
