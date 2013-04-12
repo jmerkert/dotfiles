@@ -15,4 +15,6 @@ _config/eog/
 _config/compiz/
 _config/compiz-1/
 _config/Trolltech.conf
-
+.redcar/
+dotfiles.sublime-project
+dotfiles.sublime-workspace
