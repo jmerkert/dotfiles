@@ -4,6 +4,9 @@
   branch = auto
   ui     = true
 
+[color "diff"]
+	whitespace = red reverse
+
 [push]
   default = matching
 
@@ -11,6 +14,9 @@
   editor   = nano
   autocrlf = input
   excludesfile = ~/.gitignore_global
+
+[branch]
+  autosetuprebase = always
 
 [merge]
   tool = opendiff
