@@ -18,3 +18,4 @@ _config/Trolltech.conf
 .redcar/
 dotfiles.sublime-project
 dotfiles.sublime-workspace
+_config/dconf/
