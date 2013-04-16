@@ -28,11 +28,3 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-
-[user]
-	name = Sven Strittmatter
-    email = SvenStrittmatter@icongmbh.de
-
-[github]
-    user  = Weltraumschaf
-    token = xxx
