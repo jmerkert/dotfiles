@@ -95,12 +95,16 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/.git-prompt
+if [ -f "${HOME}/.git-prompt" ] ; then
+    source "${HOME}/.git-prompt"
+else 
+    __git_ps1=""
+fi
 
 if [ "${color_prompt}" = yes ] ; then
-	PS1='\u@\h \w \[\033[90m\]\$(__git_ps1)\[\033[37m\]$\[\033[00m\] '
+	PS1='\u@\h \w \[\033[90m\]$(__git_ps1)\[\033[37m\]$\[\033[00m\] '
 else
-	PS1='\u@\h \w \$(__git_ps1) '
+	PS1='\u@\h \w $(__git_ps1) '
 fi
 
 export PS1
