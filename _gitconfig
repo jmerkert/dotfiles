@@ -5,7 +5,7 @@
   ui     = true
 
 [color "diff"]
-	whitespace = red reverse
+  whitespace = red reverse
 
 [push]
   default = matching
@@ -14,9 +14,6 @@
   editor   = nano
   autocrlf = input
   excludesfile = ~/.gitignore_global
-
-[branch]
-  autosetuprebase = always
 
 [merge]
   tool = opendiff
@@ -28,3 +25,6 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
+[credential]
+	helper = cache --timeout=3600
