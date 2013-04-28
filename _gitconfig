@@ -28,3 +28,7 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
+[user]
+  name = Weltraumschaf
+  email = ich@weltraumschaf.de
