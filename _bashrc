@@ -67,10 +67,6 @@ export PS1
 
 unset color_prompt force_color_prompt
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 if [ -f "${HOME}/.bash_aliases" ] ; then
   source "${HOME}/.bash_aliases"
 fi
@@ -90,8 +86,8 @@ if [ -f "/etc/bash_completion" ] && ! shopt -oq posix ; then
   source "/etc/bash_completion"
 fi
 
-if [ -f "${HOME}/.config/git_completion" ] ; then
-  source "${HOME}/.config/git_completion"
+if [ -f "${HOME}/.config/git-completion.bash" ] ; then
+  source "${HOME}/.config/git-completion.bash"
 fi
 
 # for `ls` (GNU coreutils, homebrew)

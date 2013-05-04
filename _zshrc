@@ -49,10 +49,6 @@ if [ -f "${HOME}/.config/perl" ] ; then
   source "${HOME}/.config/perl"
 fi
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 if [ -f "${HOME}/.bash_aliases" ] ; then
   source "${HOME}/.bash_aliases"
 fi
@@ -65,8 +61,8 @@ if [ -f "${HOME}/.local_aliases" ] ; then
   source "${HOME}/.local_aliases"
 fi
 
-if [ -f "${HOME}/.config/git_completion" ] ; then
-  source "${HOME}/.config/git_completion"
+if [ -f "${HOME}/.config/git-completion.zsh" ] ; then
+  source "${HOME}/.config/git-completion.zsh"
 fi
 
 # Source additional information, which applies to the current host only
@@ -79,6 +75,8 @@ if command -v brew >/dev/null 2>&1; then
       source `brew --prefix`/Library/Contributions/brew_zsh_completion.sh
     fi
 fi 
+
+fpath=(~/.zsh/completion $fpath)
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
