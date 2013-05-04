@@ -6,18 +6,18 @@
 [ -z "${PS1}" ] && return
 
 if [ -f "${HOME}/.bash_exports" ] ; then
-  . "${HOME}/.bash_exports"
+  source "${HOME}/.bash_exports"
 fi
 
 # dont nerv me!
 set bell-style none
 
 if [ -f "${HOME}/.config/golang" ] ; then
-  . "${HOME}/.config/golang"
+  source "${HOME}/.config/golang"
 fi
 
 if [ -f "$HOME/.config/perl" ] ; then
-  . "$HOME/.config/perl"
+  source "$HOME/.config/perl"
 fi
 
 # GNU core utils
@@ -116,26 +116,26 @@ unset color_prompt force_color_prompt
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 if [ -f "${HOME}/.bash_aliases" ] ; then
-  . "${HOME}/.bash_aliases"
+  source "${HOME}/.bash_aliases"
 fi
 
 if [ -f "${HOME}/.ssh_aliases" ] ; then
- 	. "${HOME}/.ssh_aliases"
+ 	source "${HOME}/.ssh_aliases"
 fi
 
 if [ -f "${HOME}/.local_aliases" ] ; then
-  . "${HOME}/.local_aliases"
+  source "${HOME}/.local_aliases"
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f "/etc/bash_completion" ] && ! shopt -oq posix ; then
-  . "/etc/bash_completion"
+  source "/etc/bash_completion"
 fi
 
 if [ -f "${HOME}/.config/git_completion" ] ; then
-  . "${HOME}/.config/git_completion"
+  source "${HOME}/.config/git_completion"
 fi
 
 # for `ls` (GNU coreutils, homebrew)
@@ -168,7 +168,7 @@ export CONCURRENCY_LEVEL
 
 # Source additional information, which applies to the current host only
 if [ -f "${HOME}/.bash_local" ]; then
-	. "${HOME}/.bash_local"
+	source "${HOME}/.bash_local"
 fi
 
 # In case, we've changed the directory, switch back to home dir
@@ -186,12 +186,14 @@ if [ "$SHLVL" -gt 4 ]; then
 		$(which ssh) $@
 		echo -n -e "\033k`hostname`\033\\"
 	}
+
 	function telnet() {
 		echo -n -e "\033k$1\033\\"
 		$(which telnet) $@
 		echo -n -e "\033k`hostname`\033\\"
 	}
-	echo -n -e "\033k`hostname`\033\\"
+	
+  echo -n -e "\033k`hostname`\033\\"
 fi
 
 export _PATH=$PATH # Workaround for screen on mac os
