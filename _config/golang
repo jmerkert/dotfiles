@@ -1,7 +1,7 @@
 if [ -d "/usr/local/go/" ] ; then
   export GOROOT="/usr/local/go/"
   export GOBIN="/usr/local/go/bin"
-  export PATH=$PATH:/usr/local/go/bin
+  export PATH="/usr/local/go/bin:${PATH}"
 
   export GOARCH=amd64  
 
