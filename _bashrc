@@ -5,64 +5,8 @@
 # If not running interactively, don't do anything
 [ -z "${PS1}" ] && return
 
-if [ -f "${HOME}/.bash_exports" ] ; then
-  source "${HOME}/.bash_exports"
-fi
-
 # dont nerv me!
 set bell-style none
-
-if [ -f "${HOME}/.config/golang" ] ; then
-  source "${HOME}/.config/golang"
-fi
-
-if [ -f "$HOME/.config/perl" ] ; then
-  source "$HOME/.config/perl"
-fi
-
-# GNU core utils
-if [ -d "/opt/local/libexec/gnubin" ] ; then
-  PATH="/opt/local/libexec/gnubin:${PATH}"
-fi
-
-# macport stuff
-if [ -d "/opt/local/bin" ] ; then
-  PATH="/opt/local/bin:${PATH}"
-fi
-
-if [ -d "/opt/local/sbin" ] ; then
-  PATH="/opt/local/sbin:${PATH}"
-fi  
-
-if [ -d "/opt/local/lib/qt3" ] ; then
-  export QTDIR="/opt/local/lib/qt3"
-fi
-  
-if [ -d "/opt/local/share/man" ] ; then
-  export MANPATH="/opt/local/share/man:${MANPATH}"
-fi
-
-# mysql binaries
-if [ -d "/usr/local/mysql/bin" ] ; then
-  PATH="/usr/local/mysql/bin:${PATH}"
-fi
-
-# Haskell Plattform
-if [ -d "${HOME}/Library/Haskell/bin" ] ; then
-  PATH="${HOME}/Library/Haskell/bin:${PATH}"
-fi
-
-# cabal installation
-if [ -d "${HOME}/.cabal/bin" ] ; then
-  PATH="${HOME}/.cabal/bin:${PATH}"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "${HOME}/bin" ] ; then
-  PATH="${HOME}/bin:${PATH}"
-fi
-
-export PATH
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -78,6 +22,18 @@ PROMPT_COMMAND="history -a"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+if [ -f "${HOME}/.bash_exports" ] ; then
+  source "${HOME}/.bash_exports"
+fi
+
+if [ -f "${HOME}/.config/golang" ] ; then
+  source "${HOME}/.config/golang"
+fi
+
+if [ -f "$HOME/.config/perl" ] ; then
+  source "$HOME/.config/perl"
+fi
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
