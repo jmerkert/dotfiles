@@ -20,3 +20,5 @@ alias ..='cd ..'
 alias finddarcsbup="find . -iname \"*-darcs-backup*\""
 alias rmdarcsbup="find . -iname \"*-darcs-backup*\" -exec rm -rf {} \;"
 alias rmtailingws="sed \"s/^\s*//;s/\s*$//\" -i "
+
+alias mvndirs="mkdir -p src/main/java && mkdir -p src/main/resources && mkdir -p src/test/java && mkdir -p src/test/resources"
