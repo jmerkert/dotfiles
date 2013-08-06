@@ -14,6 +14,8 @@
   editor   = nano
   autocrlf = input
   excludesfile = ~/.gitignore_global
+	packedGitWindowSize = 16m
+	packedGitLimit = 64m
 
 [merge]
   tool = opendiff
@@ -28,3 +30,10 @@
 
 [credential]
 	helper = cache --timeout=3600
+[branch]
+	autosetuprebase = always
+[pack]
+	windowMemory = 64m
+	packSizeLimit = 64m
+	threads = 1
+	deltaCacheSize = 1m

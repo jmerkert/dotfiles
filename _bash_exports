@@ -52,12 +52,6 @@ else
     export TERM='xterm-color'
 fi
 
-if [ -d /Library/Java/Home ] ; then
-    export JAVA_HOME=/Library/Java/Home
-elif [ -d /usr/lib/jvm/java-6-openjdk ] ; then
-    export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
-fi
-
 if [ -d "${HOME}/Applications/UMLet" ] ; then
     export UMLET_HOME="${HOME}/Applications/UMLet"
 fi
