@@ -37,6 +37,7 @@ _config/menus/
 _config/oxygen-gtk/
 _config/pavucontrol.ini
 _config/software-center/
+_config/Terminal/
 dotfiles.sublime-project
 dotfiles.sublime-workspace
 .redcar/
