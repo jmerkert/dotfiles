@@ -14,26 +14,23 @@
   editor   = nano
   autocrlf = input
   excludesfile = ~/.gitignore_global
-	packedGitWindowSize = 16m
-	packedGitLimit = 64m
+  packedGitWindowSize = 16m
+  packedGitLimit = 64m
+  commentchar = %
 
 [merge]
   tool = opendiff
-
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-  
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+#  tool = meld
+  conflictstyle = diff3
 
 [credential]
 	helper = cache --timeout=3600
 [branch]
 	autosetuprebase = always
 [pack]
-	windowMemory = 64m
-	packSizeLimit = 64m
-	threads = 1
-	deltaCacheSize = 1m
+	windowMemory = 256m
+	packSizeLimit = 512m
+	threads = 2
+	deltaCacheSize = 100m
+[rerere]
+	enabled = true
