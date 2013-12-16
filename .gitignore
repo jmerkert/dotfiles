@@ -39,6 +39,9 @@ _config/pavucontrol.ini
 _config/software-center/
 _config/Terminal/
 _config/vlc/
+_config/ReText project/
+_config/htop/
+_config/keepassx/
 dotfiles.sublime-project
 dotfiles.sublime-workspace
 .redcar/

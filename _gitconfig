@@ -34,3 +34,9 @@
 	deltaCacheSize = 100m
 [rerere]
 	enabled = true
+[user]
+	name = Sven Strittmatter
+	email = ich@weltraumschaf.de
+[alias]
+	tree = log --oneline --graph --decorate --all
+	listtags = !git for-each-ref --sort=subject refs/tags | awk '{print $2, $3}' | sed 's,tag refs/tags/, * ,' | sed 's,commit refs/tags/,   ,'
