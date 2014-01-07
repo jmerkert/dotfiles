@@ -3,11 +3,7 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
-if [ -f "$HOME/.bash_exports" ] ; then
-  . "$HOME/.bash_exports"
-fi
+[ -z "${PS1}" ] && return
 
 if [ -f "${HOME}/.bash_functions" ]; then
   . "${HOME}/.bash_functions"
@@ -15,56 +11,6 @@ fi
 
 # dont nerv me!
 set bell-style none
-
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-
-if [ -f "$HOME/.config/golang" ] ; then
-  . "$HOME/.config/golang"
-fi
-
-if [ -f "$HOME/.config/perl" ] ; then
-  . "$HOME/.config/perl"
-fi
-
-# GNU core utils
-if [ -d /opt/local/libexec/gnubin ] ; then
-  PATH="/opt/local/libexec/gnubin:$PATH"
-fi
-
-# macport stuff
-if [ -d /opt/local/bin ] && [ -d /opt/local/sbin ] ; then
-  PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-  
-  if [ -d /opt/local/lib/qt3 ] ; then
-    export QTDIR=/opt/local/lib/qt3
-  fi
-  
-  if [ -d /opt/local/share/man ] ; then
-    export MANPATH="/opt/local/share/man:$MANPATH"
-  fi
-fi
-
-# mysql binaries
-if [ -d /usr/local/mysql/bin ] ; then
-  PATH="/usr/local/mysql/bin:$PATH"
-fi
-
-# Haskell Plattform
-if [ -d "$HOME/Library/Haskell/bin" ] ; then
-  PATH="$HOME/Library/Haskell/bin:$PATH"
-fi
-
-# cabal installation
-if [ -d "$HOME/.cabal/bin" ] ; then
-  PATH="$HOME/.cabal/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-  PATH="$HOME/bin:$PATH"
-fi
-
-export PATH
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -80,6 +26,18 @@ PROMPT_COMMAND="history -a"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+if [ -f "${HOME}/.bash_exports" ] ; then
+  source "${HOME}/.bash_exports"
+fi
+
+if [ -f "${HOME}/.config/golang" ] ; then
+  source "${HOME}/.config/golang"
+fi
+
+if [ -f "$HOME/.config/perl" ] ; then
+  source "$HOME/.config/perl"
+fi
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -97,65 +55,58 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-parse_git_branch() {
-    branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
-    if [ "$branch" ]; then
-        if [ "$branch" = '((no branch))' ]; then
-            tag=$(git describe 2> /dev/null)
-            if [ $? -eq 0 ]; then
-                echo "(no branch, $tag)"
-            fi
-        else
-            echo $branch
-        fi
-    fi
-}
-
-if [ "$color_prompt" = yes ]; then
-  PS1='\u@\h \w \[\033[90m\]$(parse_git_branch)\[\033[37m\]$\[\033[00m\] '
-else
-	PS1='\u@\h \w $(parse_git_branch) '
+if [ -f "${HOME}/.git-prompt" ] ; then
+    source "${HOME}/.git-prompt"
+else 
+    __git_ps1=""
 fi
+
+if [ "${color_prompt}" = yes ] ; then
+	PS1='\u@\h \w \[\033[90m\]$(__git_ps1)\[\033[37m\]$\[\033[00m\] '
+else
+	PS1='\u@\h \w $(__git_ps1) '
+fi
+
 export PS1
 
 unset color_prompt force_color_prompt
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f "$HOME/.bash_aliases" ] ; then
-  . "$HOME/.bash_aliases"
+if [ -f "${HOME}/.bash_aliases" ] ; then
+  source "${HOME}/.bash_aliases"
 fi
 
-if [ -f "$HOME/.ssh_aliases" ] ; then
-    source "$HOME/.ssh_aliases"
+if [ -f "${HOME}/.ssh_aliases" ] ; then
+ 	source "${HOME}/.ssh_aliases"
+fi
+
+if [ -f "${HOME}/.local_aliases" ] ; then
+  source "${HOME}/.local_aliases"
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix ; then
-  . /etc/bash_completion
+if [ -f "/etc/bash_completion" ] && ! shopt -oq posix ; then
+  source "/etc/bash_completion"
 fi
 
-if [ -f "$HOME/.config/git_completion" ] ; then
-  . "$HOME/.config/git_completion"
+if [ -f "${HOME}/.config/git-completion.bash" ] ; then
+  source "${HOME}/.config/git-completion.bash"
 fi
 
 # for `ls` (GNU coreutils, homebrew)
 # port install coreutils +with_default_names
 if [ "$TERM" != "dumb" ] ; then
   # FIXIT: Which is the right name and determine BSD/MACOS or LINUX
-  export LSCOLORS=gxfxcxdxbxegedabagacad
-  export LS_COLORS='no=00:fi=00:di=01;35:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.flac=01;35:*.mp3=01;35:*.mpc=01;35:*.ogg=01;35:*.wav=01;35:';
-  export GREP_OPTIONS='--color=always'
+  #export LSCOLORS=gxfxcxdxbxegedabagacad
+  #export LS_COLORS='no=00:fi=00:di=01;35:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.flac=01;35:*.mp3=01;35:*.mpc=01;35:*.ogg=01;35:*.wav=01;35:';
+  export GREP_OPTIONS='--color=auto'
 
-  if which dircolors >/dev/null; then
+  #if which dircolors >/dev/null; then
     # core utils installed
-    export LS_OPTIONS='--color=auto --file-type'
-    eval `dircolors "$HOME/.dir_colors"`
-  fi
+    #export LS_OPTIONS='--color=auto --file-type'
+    #eval `dircolors "$HOME/.dir_colors"`
+  #fi
 fi
 
 # Set CONCURRENCY_LEVEL to number of CPUs
@@ -168,11 +119,12 @@ elif [ -x "`which system_profiler`" ]; then
 else
   CONCURRENCY_LEVEL=1
 fi
+
 export CONCURRENCY_LEVEL
 
 # Source additional information, which applies to the current host only
-if [ -f "$HOME/.bash_local" ]; then
-	. "$HOME/.bash_local"
+if [ -f "${HOME}/.bash_local" ]; then
+	source "${HOME}/.bash_local"
 fi
 
 # In case, we've changed the directory, switch back to home dir
@@ -190,12 +142,23 @@ if [ "$SHLVL" -gt 4 ]; then
 		$(which ssh) $@
 		echo -n -e "\033k`hostname`\033\\"
 	}
+
 	function telnet() {
 		echo -n -e "\033k$1\033\\"
 		$(which telnet) $@
 		echo -n -e "\033k`hostname`\033\\"
 	}
-	echo -n -e "\033k`hostname`\033\\"
+	
+  echo -n -e "\033k`hostname`\033\\"
 fi
 
 export _PATH=$PATH # Workaround for screen on mac os
+
+if ommand -v brew >/dev/null 2>&1; then
+    if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
+      source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+    fi
+fi 
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "${HOME}/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "${HOME}/.gvm/bin/gvm-init.sh"

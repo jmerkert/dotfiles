@@ -1,5 +1,5 @@
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
+if [ -x /usr/bin/dircolors ] ; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias vdir='vdir --color=auto'
@@ -20,7 +20,10 @@ alias ..='cd ..'
 
 alias finddarcsbup="find . -iname \"*-darcs-backup*\""
 alias rmdarcsbup="find . -iname \"*-darcs-backup*\" -exec rm -rf {} \;"
-alias rmtrailingws="sed \"s/^\s*//;s/\s*$//\" -i "
+alias rmtailingws="sed \"s/^\s*//;s/\s*$//\" -i "
+alias mvndirs="mkdir -p src/main/java && mkdir -p src/main/resources && mkdir -p src/test/java && mkdir -p src/test/resources"
+alias ticket="git log --pretty=format:\"%h%x09%an%x09%cd%x09%s\" |  grep -i "
+alias files="git diff-tree --no-commit-id --name-only -r "
 
 if [ -f "${HOME}/.local_aliases" ] ; then
 	. "${HOME}/.local_aliases"

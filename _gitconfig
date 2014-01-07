@@ -4,6 +4,9 @@
   branch = auto
   ui     = true
 
+[color "diff"]
+  whitespace = red reverse
+
 [push]
   default = matching
 
@@ -11,33 +14,29 @@
   editor   = nano
   autocrlf = input
   excludesfile = ~/.gitignore_global
+  packedGitWindowSize = 16m
+  packedGitLimit = 64m
+  commentchar = %
 
 [merge]
   tool = opendiff
+#  tool = meld
+  conflictstyle = diff3
 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
-  
-[diff]
-  external = ~/bin/git-diff
-
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-
+[credential]
+	helper = cache --timeout=3600
+[branch]
+	autosetuprebase = always
+[pack]
+	windowMemory = 256m
+	packSizeLimit = 512m
+	threads = 2
+	deltaCacheSize = 100m
+[rerere]
+	enabled = true
 [user]
-  name = Weltraumschaf
-  email = ich@weltraumschaf.de
-
-[github]
-  user  = Weltraumschaf
-  token = XXX
-
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	name = Sven Strittmatter
+	email = ich@weltraumschaf.de
+[alias]
+	tree = log --oneline --graph --decorate --all
+	listtags = !git for-each-ref --sort=subject refs/tags | awk '{print $2, $3}' | sed 's,tag refs/tags/, * ,' | sed 's,commit refs/tags/,   ,'

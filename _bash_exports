@@ -1,3 +1,49 @@
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+
+# GNU core utils
+if [ -d "/opt/local/libexec/gnubin" ] ; then
+  PATH="/opt/local/libexec/gnubin:${PATH}"
+fi
+
+# macport stuff
+if [ -d "/opt/local/bin" ] ; then
+  PATH="/opt/local/bin:${PATH}"
+fi
+
+if [ -d "/opt/local/sbin" ] ; then
+  PATH="/opt/local/sbin:${PATH}"
+fi  
+
+if [ -d "/opt/local/lib/qt3" ] ; then
+  export QTDIR="/opt/local/lib/qt3"
+fi
+  
+if [ -d "/opt/local/share/man" ] ; then
+  export MANPATH="/opt/local/share/man:${MANPATH}"
+fi
+
+# mysql binaries
+if [ -d "/usr/local/mysql/bin" ] ; then
+  PATH="/usr/local/mysql/bin:${PATH}"
+fi
+
+# Haskell Plattform
+if [ -d "${HOME}/Library/Haskell/bin" ] ; then
+  PATH="${HOME}/Library/Haskell/bin:${PATH}"
+fi
+
+# cabal installation
+if [ -d "${HOME}/.cabal/bin" ] ; then
+  PATH="${HOME}/.cabal/bin:${PATH}"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "${HOME}/bin" ] ; then
+  PATH="${HOME}/bin:${PATH}"
+fi
+
+export PATH
+
 # enable 256 colors in terminal (useful for vim colorschemes)
 if [ -e /usr/share/terminfo/x/xterm-256color ] ; then
     export TERM='xterm-256color'
@@ -5,32 +51,15 @@ else
     export TERM='xterm-color'
 fi
 
-if [ -d /Library/Java/Home ] ; then
-  export JAVA_HOME=/Library/Java/Home
+if [ -d "${HOME}/Applications/UMLet" ] ; then
+    export UMLET_HOME="${HOME}/Applications/UMLet"
 fi
 
-if [ -d /opt/local/share/java/grails ] ; then
-  export GRAILS_HOME="/opt/local/share/java/grails"
-fi
-
-if [ -d "$HOME/Applications/UMLet" ] ; then
-  export UMLET_HOME="${HOME}/Applications/UMLet"
-fi
-
-if [ -d /usr/share/maven ] ; then
-  export M2_HOME="/usr/share/maven"
-  export MAVEN_OPTS="-Xms256m -Xmx512m"
-  export M2="${M2_HOME}/bin"
-fi
-
-if [ -d /cygdrive/d/Programme/apache-maven-3.0.4 ] ; then
-  export M2_HOME="/cygdrive/d/Programme/apache-maven-3.0.4"
-  export MAVEN_OPTS="-Xms256m -Xmx512m"
-  export M2="${M2_HOME}/bin"
-fi
+export MAVEN_OPTS="-Xmx512m"
+export M2="${HOME}/.m2"
 
 if [ -d /usr/share/ant/ ] ; then 
-  export ANT_HOME="/usr/share/ant"
+    export ANT_HOME="/usr/share/ant"
 fi
 
 if [ -d /cygdrive/d/Programme/apache-ant-1.8.4 ] ; then 
@@ -56,12 +85,14 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="cd:cd -:pwd;exit:date:* --help"
 
+# http://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html#The-LANGUAGE-variable
+export LANGUAGE=en_US.UTF-8
 
 # Set to UTF-8 and english locale
-export LANG="en_US.UTF-8"
+# http://www.gnu.org/software/gettext/manual/html_node/Locale-Environment-Variables.html
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-# Set to 'C' to make ls sort dotfiles
-export LC_COLLATE=C
 export CLICOLOR=1
 
 # options for darcs
@@ -70,9 +101,17 @@ export DARCS_DO_COLOR_LINES=1
 export DARCS_ALWAYS_COLOR=1
 
 
-if [ "linux-gnu" = "$OSTYPE" ]; then
+if [ "linux-gnu" = "${OSTYPE}" ]; then
     # Export some debian stuff
     DEBEMAIL=$DEBEMAIL_local
     DEBFULLNAME=$DEBFULLNAME_local
     export DEBEMAIL DEBFULLNAME
+fi
+
+if [ -f "${HOME}/.local_exports" ] ; then
+    source "${HOME}/.local_exports"
+fi
+
+if [ -d "$HOME/Library/Haskell/bin" ] ; then 
+    export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
