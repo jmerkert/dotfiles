@@ -13,12 +13,12 @@ fi
 
 if [ -d "/opt/local/sbin" ] ; then
   PATH="/opt/local/sbin:${PATH}"
-fi  
+fi
 
 if [ -d "/opt/local/lib/qt3" ] ; then
   export QTDIR="/opt/local/lib/qt3"
 fi
-  
+
 if [ -d "/opt/local/share/man" ] ; then
   export MANPATH="/opt/local/share/man:${MANPATH}"
 fi
@@ -43,7 +43,7 @@ if [ -d "${HOME}/bin" ] ; then
   PATH="${HOME}/bin:${PATH}"
 fi
 
-if [ -d "$HOME/Library/Haskell/bin" ] ; then 
+if [ -d "$HOME/Library/Haskell/bin" ] ; then
     export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
 
@@ -60,15 +60,11 @@ if [ -d "${HOME}/Applications/UMLet" ] ; then
     export UMLET_HOME="${HOME}/Applications/UMLet"
 fi
 
-if [ -d /usr/share/ant/ ] ; then 
+if [ -d /usr/share/ant/ ] ; then
     export ANT_HOME="/usr/share/ant"
 fi
 
-if [ -d /cygdrive/d/Programme/apache-ant-1.8.4 ] ; then 
-  export ANT_HOME="/cygdrive/d/Programme/apache-ant-1.8.4"
-fi
-
-# Maven 
+# Maven
 export MAVEN_OPTS="-Xmx1024m"
 export M2="${HOME}/.m2"
 export M2_REPO="${M2}/repository"
@@ -123,4 +119,3 @@ fi
 if [ -f "${HOME}/.local_exports" ] ; then
     source "${HOME}/.local_exports"
 fi
-
