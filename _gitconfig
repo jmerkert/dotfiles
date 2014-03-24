@@ -40,6 +40,7 @@
 [alias]
   ci = commit
   st = status
+  co = checkout
 
   iam = !git config --get user.email
   daily = !git log --all --oneline --since '1 day ago' --regexp-ignore-case --committer $(git iam)
@@ -56,3 +57,5 @@
   ticket = !sh -c 'git log --pretty=format:\"*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\"' -
   ticket-cherry-pick-list = !sh -c 'git log --pretty=format:\"%ct%x09*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\" | sort --key=1.1,2.1 | cut -f 2' -
   ticket-files-only = !sh -c 'git log --pretty=format:\"\" --regexp-ignore-case --grep=\"$1\" --name-only | sort | uniq' -
+
+  up = !sh -c 'git pull --rebase && git log --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
