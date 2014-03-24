@@ -48,11 +48,11 @@
   alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
   branchname = rev-parse --abbrev-ref HEAD
 
-	tree = log --oneline --graph --decorate --all
+  tree = log --oneline --graph --decorate --all
   graph = log --graph --oneline --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-	listtags = !git for-each-ref --sort=subject refs/tags | awk '{print $2, $3}' | sed 's,tag refs/tags/, * ,' | sed 's,commit refs/tags/,   ,'
+  listtags = !git for-each-ref --sort=subject refs/tags | awk '{print $2, $3}' | sed 's,tag refs/tags/, * ,' | sed 's,commit refs/tags/,   ,'
 
   ticket = !sh -c 'git log --pretty=format:\"*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\"' -
   ticket-cherry-pick-list = !sh -c 'git log --pretty=format:\"%ct%x09*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\" | sort --key=1.1,2.1 | cut -f 2' -
