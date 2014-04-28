@@ -6,7 +6,7 @@ function linkFile {
 
     # Only create backup if target is a file or directory
     if [ -f "${target}" ] || [ -d "${target}" ]; then
-        mvv "$target" "$target.bak"
+        mv -v "$target" "$target.bak"
     fi
 
     ln -svf "${source}" "${target}"
