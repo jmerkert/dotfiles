@@ -54,7 +54,7 @@
 
   listtags = !git for-each-ref --sort=subject refs/tags | awk '{print $2, $3}' | sed 's,tag refs/tags/, * ,' | sed 's,commit refs/tags/,   ,'
 
-  ticket = !sh -c 'git log --pretty=format:\"*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\"' -
+  ticket = !sh -c 'git log --pretty=format:\"%h%x09%an%x09%cd%x09%s\" --regexp-ignore-case --grep=\"$1\"' -
   ticket-cherry-pick-list = !sh -c 'git log --pretty=format:\"%ct%x09*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\" | sort --key=1.1,2.1 | cut -f 2' -
   ticket-files-only = !sh -c 'git log --pretty=format:\"\" --regexp-ignore-case --grep=\"$1\" --name-only | sort | uniq' -
 
