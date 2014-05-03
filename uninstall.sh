@@ -14,15 +14,15 @@ sourceDir="src/_*"
 ##
 function unlinkFile {
     targetFile="${1/src\//}"
-    target="${1/_/.}"
+    targetFile="${targetFile/_/.}"
     target="${2}/${targetFile}"
 
     rm -v "${target}"
 }
 
-for file in sourceDir
+for file in ${sourceDir}
 do
-  linkFile "${file}" "${HOME}"
+  unlinkFile "${file}" "${HOME}"
 done
 
 echo "Finished :)"

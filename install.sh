@@ -17,7 +17,7 @@ sourceDir="src/_*"
 function linkFile {
     source="${PWD}/$1"
     targetFile="${1/src\//}"
-    target="${1/_/.}"
+    targetFile="${targetFile/_/.}"
     target="${2}/${targetFile}"
 
     # Only create backup if target is a file or directory
@@ -31,7 +31,7 @@ function linkFile {
     ln -svf "${source}" "${target}"
 }
 
-for file in sourceDir
+for file in ${sourceDir}
 do
   linkFile "${file}" "${HOME}"
 done
