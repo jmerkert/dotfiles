@@ -19,43 +19,65 @@
   commentchar = %
 
 [merge]
-  tool = opendiff
-#  tool = meld
+#  tool = opendiff
+  tool = meld
   conflictstyle = diff3
 
 [credential]
-	helper = cache --timeout=3600
+  helper = cache --timeout=3600
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [pack]
-	windowMemory = 256m
-	packSizeLimit = 512m
-	threads = 2
-	deltaCacheSize = 100m
+  windowMemory = 256m
+  packSizeLimit = 512m
+  threads = 2
+  deltaCacheSize = 100m
 [rerere]
-	enabled = true
+  enabled = true
 [user]
-	name = Sven Strittmatter
-	email = ich@weltraumschaf.de
+  name = Sven Strittmatter
+  email = ich@weltraumschaf.de
 [alias]
   ci = commit
   st = status
   co = checkout
 
   iam = !git config --get user.email
-  daily = !git log --all --oneline --since '1 day ago' --regexp-ignore-case --committer $(git iam)
+  daily = !git log --all --oneline --since '1 day ago' --regexp-ignore-case \
+    --committer $(git iam)
 
-  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
+  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && \
+    exit 0 || echo \"usage: git alias <new alias> <original command>\" \
+    >&2 && exit 1' -"
+
   branchname = rev-parse --abbrev-ref HEAD
 
   tree = log --oneline --graph --decorate --all
-  graph = log --graph --oneline --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-  listtags = !git for-each-ref --sort=subject refs/tags | awk '{print $2, $3}' | sed 's,tag refs/tags/, * ,' | sed 's,commit refs/tags/,   ,'
+  graph = log --graph --oneline \
+    --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+    --abbrev-commit --date=relative
 
-  ticket = !sh -c 'git log --pretty=format:\"%h%x09%an%x09%cd%x09%s\" --regexp-ignore-case --grep=\"$1\"' -
-  ticket-cherry-pick-list = !sh -c 'git log --pretty=format:\"%ct%x09*%x20%H%x20%s\" --regexp-ignore-case --grep=\"$1\" | sort --key=1.1,2.1 | cut -f 2' -
-  ticket-files-only = !sh -c 'git log --pretty=format:\"\" --regexp-ignore-case --grep=\"$1\" --name-only | sort | uniq' -
+  lg = log --graph \
+    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+    --abbrev-commit \
+    --date=relative
 
-  up = !sh -c 'git pull --rebase && git log --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
+  listtags = !git for-each-ref \
+    --sort=subject refs/tags \
+    | awk '{print $2, $3}' \
+    | sed 's,tag refs/tags/, * ,' \
+    | sed 's,commit refs/tags/,   ,'
+
+  ticket = !sh -c 'git log \
+    --date=local \
+    --reverse --pretty=format:\"%H%x09%ad%x09%s\" \
+    --regexp-ignore-case \
+    --grep=\"${1}\"' -
+
+  ticket-files = !sh -c 'git log --pretty=format:\"\" \
+    --regexp-ignore-case \
+    --grep=\"${1}\" --name-only | sort | uniq' -
+
+  up = !sh -c 'git pull --rebase && git log \
+    --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
