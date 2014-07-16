@@ -56,8 +56,13 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ -f "${HOME}/.git-prompt" ] ; then
+    GIT_PS1_SHOWCOLORHINTS="true"
+    GIT_PS1_SHOWDIRTYSTATE="true"
+    GIT_PS1_SHOWSTASHSTATE="true"
+    GIT_PS1_SHOWUNTRACKEDFILES="true"
+    GIT_PS1_SHOWUPSTREAM="auto"
     source "${HOME}/.git-prompt"
-else 
+else
     __git_ps1=""
 fi
 
@@ -148,7 +153,7 @@ if [ "$SHLVL" -gt 4 ]; then
 		$(which telnet) $@
 		echo -n -e "\033k`hostname`\033\\"
 	}
-	
+
   echo -n -e "\033k`hostname`\033\\"
 fi
 
@@ -158,8 +163,7 @@ if ommand -v brew >/dev/null 2>&1; then
     if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
       source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
     fi
-fi 
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
-

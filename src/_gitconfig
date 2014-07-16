@@ -38,46 +38,77 @@
   name = Sven Strittmatter
   email = ich@weltraumschaf.de
 [alias]
+  # SVN like shortcuts.
   ci = commit
   st = status
   co = checkout
 
+  # Shows the email address used for commits.
   iam = !git config --get user.email
-  daily = !git log --all --oneline --since '1 day ago' --regexp-ignore-case \
+
+  # Shows a short log about what you did suince one day ago.
+  daily = ! git log --all \
+    --oneline \
+    --since '1 day ago' \
+    --regexp-ignore-case \
     --committer $(git iam)
 
-  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && \
-    exit 0 || echo \"usage: git alias <new alias> <original command>\" \
-    >&2 && exit 1' -"
-
-  branchname = rev-parse --abbrev-ref HEAD
-
-  tree = log --oneline --graph --decorate --all
-
-  graph = log --graph --oneline \
-    --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
-    --abbrev-commit --date=relative
-
-  lg = log --graph \
-    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+  # A nice git log with branches shown as railroads.
+  tree = log \
+    --oneline \
+    --graph \
+    --decorate \
+    --all
+  # Also nice log output.
+  graph = log \
+    --oneline \
+    --graph \
     --abbrev-commit \
-    --date=relative
+    --date=relative \
+    --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  # And a third flavor for log.
+  lg = log \
+    --graph \
+    --abbrev-commit \
+    --date=relative \
+    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
-  listtags = !git for-each-ref \
+  # Shows a list of tags. Annotated tags have an * before the name.
+  listtags = ! git for-each-ref \
     --sort=subject refs/tags \
     | awk '{print $2, $3}' \
     | sed 's,tag refs/tags/, * ,' \
     | sed 's,commit refs/tags/,   ,'
 
-  ticket = !sh -c 'git log \
+  # Show all commits with the giben ticket id.
+  # Example (single ticket id):
+  # $> git ticket 1678
+  # Example (multiple ticket id):
+  # $> git ticket "38750\|39829\|41521"
+  ticket = ! sh -c 'git log \
     --date=local \
     --reverse --pretty=format:\"%H%x09%ad%x09%s\" \
     --regexp-ignore-case \
     --grep=\"${1}\"' -
-
-  ticket-files = !sh -c 'git log --pretty=format:\"\" \
+  # Similar to `git ticket` but shows all affected files instead of the commit list.
+  ticket-files = ! sh -c 'git log --pretty=format:\"\" \
     --regexp-ignore-case \
     --grep=\"${1}\" --name-only | sort | uniq' -
 
-  up = !sh -c 'git pull --rebase && git log \
-    --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
+  # Add a new alias to global config.
+  alias = "! sh -c '[ $# = 2 ] && \
+    git config --global alias.\"$1\" \"$2\" && \
+    exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && \
+    exit 1' -"
+
+  # Shows the name of current branch checked out.
+  branchname = rev-parse --abbrev-ref HEAD
+
+  # Updates your repo by rebasing and shows a log of the updated stuff.
+  up = ! sh -c 'git pull --rebase && \
+    git log \
+      --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
+
+  # This approximates what happens with hg/darcs record (i.e. ask interactively
+  # which patch hunk to commit, and then do the commit) :
+  record = ! sh -c '(git add -p -- $@ && git commit) || git reset' --
