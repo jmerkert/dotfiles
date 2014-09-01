@@ -74,11 +74,11 @@ if command -v brew >/dev/null 2>&1; then
     if [ -f `brew --prefix`/Library/Contributions/brew_zsh_completion.sh ]; then
       source `brew --prefix`/Library/Contributions/brew_zsh_completion.sh
     fi
-fi 
+fi
 
 if [ -f "${HOME}/.git-prompt" ] ; then
     source "${HOME}/.git-prompt"
-else 
+else
     __git_ps1="foo"
 fi
 

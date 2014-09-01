@@ -36,7 +36,7 @@
   enabled = true
 [user]
   name = Sven Strittmatter
-  email = ich@weltraumschaf.de
+  email = Sven.Strittmatter@icongmbh.de
 [alias]
   # SVN like shortcuts.
   ci = commit

@@ -44,7 +44,11 @@ if [ -d "${HOME}/bin" ] ; then
 fi
 
 if [ -d "$HOME/Library/Haskell/bin" ] ; then
-    export PATH="$HOME/Library/Haskell/bin:$PATH"
+    PATH="$HOME/Library/Haskell/bin:$PATH"
+fi
+
+if [ -d "$HOME/.rvm/bin" ] ; then
+    PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
 
 export PATH
