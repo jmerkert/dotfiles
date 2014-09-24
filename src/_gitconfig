@@ -111,4 +111,4 @@
 
   # This approximates what happens with hg/darcs record (i.e. ask interactively
   # which patch hunk to commit, and then do the commit) :
-  record = ! sh -c '(git add -p -- $@ && git commit) || git reset' --
+  rec = ! sh -c '(git add -p -- $@ && git commit) || git reset' --
