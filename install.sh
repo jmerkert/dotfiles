@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ##
 ## Intsalls the dotfiles into $HOME by softlinking them.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ##
 ## Uninstalls the scripts from $HOME by removing the symlinks.
