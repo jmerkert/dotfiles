@@ -120,7 +120,9 @@ if [ -f /proc/cpuinfo ]; then
   CONCURRENCY_LEVEL=`grep -c processor /proc/cpuinfo`
 elif [ -x "`which system_profiler`" ]; then
   # mac os style
-  CONCURRENCY_LEVEL=`system_profiler SPHardwareDataType | grep --color=never "Total Number Of Cores" | sed 's/[^0-9]*//g'`
+  CONCURRENCY_LEVEL=`system_profiler SPHardwareDataType 2> /dev/null \
+    | grep --color=never -i "total number of cores" \
+    | sed 's/[^0-9]*//g'`
 else
   CONCURRENCY_LEVEL=1
 fi
