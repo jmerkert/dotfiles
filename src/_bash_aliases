@@ -11,7 +11,6 @@ fi
 
 # Clear in Cygwin
 if [ "$(expr substr $(uname -s) 1 6)" = "CYGWIN" ] ; then
-    echo "On CYGWIN"
     alias clear='printf "\033c"'
 fi
 
