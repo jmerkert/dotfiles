@@ -10,7 +10,8 @@ if [ -x /usr/bin/dircolors ] ; then
 fi
 
 # Clear in Cygwin
-if [ uname -o == "Cygwin" ] ; then
+if [ "$(expr substr $(uname -s) 1 6)" = "CYGWIN" ] ; then
+    echo "On CYGWIN"
     alias clear='printf "\033c"'
 fi
 
