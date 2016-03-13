@@ -213,101 +213,40 @@ set tabstospaces
 ##
 ## All regexes should be extended regular expressions.
 
-include "/usr/share/nano/asm.nanorc"
-include "/usr/share/nano/awk.nanorc"
-include "/usr/share/nano/c.nanorc"
-#include "/usr/share/nano/cfg.nanorc"
-include "/usr/share/nano/cmake.nanorc"
-include "/usr/share/nano/css.nanorc"
-include "/usr/share/nano/debian.nanorc"
-include "/usr/share/nano/fortran.nanorc"
-include "/usr/share/nano/gentoo.nanorc"
-include "/usr/share/nano/groff.nanorc"
-include "/usr/share/nano/html.nanorc"
-#include "/usr/share/nano/ini.nanorc"
-include "/usr/share/nano/java.nanorc"
-#include "/usr/share/nano/lua.nanorc"
-include "/usr/share/nano/makefile.nanorc"
-include "/usr/share/nano/man.nanorc"
-include "/usr/share/nano/mgp.nanorc"
-include "/usr/share/nano/mutt.nanorc"
-include "/usr/share/nano/nanorc.nanorc"
-include "/usr/share/nano/objc.nanorc"
-include "/usr/share/nano/ocaml.nanorc"
-include "/usr/share/nano/patch.nanorc"
-include "/usr/share/nano/perl.nanorc"
-include "/usr/share/nano/php.nanorc"
-include "/usr/share/nano/pov.nanorc"
-include "/usr/share/nano/python.nanorc"
-include "/usr/share/nano/ruby.nanorc"
-include "/usr/share/nano/sh.nanorc"
-#include "/usr/share/nano/spec.nanorc"
-include "/usr/share/nano/tcl.nanorc"
-include "/usr/share/nano/tex.nanorc"
-include "/usr/share/nano/xml.nanorc"
-
-## JavaScript
-#############
-
-syntax "JavaScript" "\.(js)$"
-# Default
-color white "^.+$"
-# Decimal, cotal and hexadecimal numbers
-color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
-# Floating point number with at least one digit before decimal point
-color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
-color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
-# Keywords
-color green "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
-color green "\<(for|function|if|in|instanceof|new|null|return|switch)\>"
-color green "\<(switch|this|throw|try|typeof|undefined|var|void|while|with)\>"
-# Type specifiers
-color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
-color red "\<(Number|Object|RegExp|String)\>"
-color red "\<(true|false)\>"
-# String
-color brightyellow "L?\"(\\"|[^"])*\""
-color brightyellow "L?'(\'|[^'])*'"
-# Escapes
-color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
-# Comments
-color magenta start="/\*" end="\*/"
-color magenta "//.*$"
-
-## Markdown
-## found: http://lists.gnu.org/archive/html/help-nano/2006-08/msg00000.html
-## edited by serialhex http://daringfireball.net/projects/markdown/syntax
-###########################################################################
-syntax "markdown" "\.txt$" "\.text$" "\.md$" "\.markdown$"
-# Quotations
-color cyan "^>.*"
-# Emphasis
-color green "_.*_"
-color green "\*.*\*"
-# Strong emphasis
-color brightgreen "\*\*.*\*\*"
-color brightgreen "__.*__"
-# Underline headers
-color brightblue "^====(=*)"
-color brightblue "^----(-*)"
-# Hash headers
-color brightblue "^#.*"
-# Linkified URLs (and inline html tags)
-color brightmagenta start="<" end=">"
-# Links
-color brightmagenta "\[.*\]\(.*\)"
-# Reference-style links
-color brightmagenta "\[.*\]( )?\[.*\]"
-# Link id's:
-color brightmagenta "^\[.*\]:( )+.*"
-# Code spans
-color brightyellow "`.*`"
-# Code blocks
-color brightyellow "^( ).*"
-# Inline images
-color brightmagenta "!\[.*\]\(.*\)"
-# Reference-style images
-color brightmagenta "!\[.*\]\[.*\]"
+include "~/.nanorc.d/asm.nanorc"
+include "~/.nanorc.d/awk.nanorc"
+include "~/.nanorc.d/c.nanorc"
+include "~/.nanorc.d/cfg.nanorc"
+include "~/.nanorc.d/cmake.nanorc"
+include "~/.nanorc.d/css.nanorc"
+include "~/.nanorc.d/debian.nanorc"
+include "~/.nanorc.d/fortran.nanorc"
+include "~/.nanorc.d/gentoo.nanorc"
+include "~/.nanorc.d/groff.nanorc"
+include "~/.nanorc.d/html.nanorc"
+include "~/.nanorc.d/ini.nanorc"
+include "~/.nanorc.d/java.nanorc"
+include "~/.nanorc.d/javascript.nanorc"
+include "~/.nanorc.d/lua.nanorc"
+include "~/.nanorc.d/makefile.nanorc"
+include "~/.nanorc.d/man.nanorc"
+include "~/.nanorc.d/markdown.nanorc"
+include "~/.nanorc.d/mgp.nanorc"
+include "~/.nanorc.d/mutt.nanorc"
+include "~/.nanorc.d/nanorc.nanorc"
+include "~/.nanorc.d/objc.nanorc"
+include "~/.nanorc.d/ocaml.nanorc"
+include "~/.nanorc.d/patch.nanorc"
+include "~/.nanorc.d/perl.nanorc"
+include "~/.nanorc.d/php.nanorc"
+include "~/.nanorc.d/pov.nanorc"
+include "~/.nanorc.d/python.nanorc"
+include "~/.nanorc.d/ruby.nanorc"
+include "~/.nanorc.d/sh.nanorc"
+include "~/.nanorc.d/spec.nanorc"
+include "~/.nanorc.d/tcl.nanorc"
+include "~/.nanorc.d/tex.nanorc"
+include "~/.nanorc.d/xml.nanorc"
 
 ## Settings
 ###########
