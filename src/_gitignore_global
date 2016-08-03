@@ -34,3 +34,10 @@ Thumbs.db
 .classpath
 .project
 .settings/
+
+# Netbeans stuff
+nbproject/
+
+# IDEA stuff
+.idea/
+*.iml
