@@ -37,6 +37,7 @@ Thumbs.db
 
 # Netbeans stuff
 nbproject/
+nb-configuration.xml
 
 # IDEA stuff
 .idea/
