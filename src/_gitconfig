@@ -116,6 +116,10 @@
         sort -nr | \
         head -10'
 
+  # Grep grouped by files with lines.
+  # http://travisjeffery.com/b/2012/02/search-a-git-repo-like-a-ninja/
+  g = grep --break --heading --line-number
+  
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
