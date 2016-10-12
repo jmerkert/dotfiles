@@ -42,3 +42,6 @@ nb-configuration.xml
 # IDEA stuff
 .idea/
 *.iml
+
+# Node.js stuff
+node_modules/
