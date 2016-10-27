@@ -121,6 +121,7 @@
   g = grep --break --heading --line-number
   
   stash-svn-rebase = ! sh -c 'git stash && git svn rebase && git stash pop'
+  stash-svn-dcommit = ! sh -c 'git stash && git svn dcommit && git stash pop'
  
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
