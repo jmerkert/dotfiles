@@ -45,3 +45,11 @@ nb-configuration.xml
 
 # Node.js stuff
 node_modules/
+
+# LaTeX stuff:
+.texpadtmp/
+*.aux
+*.out
+*.synctex.gz
+*.toc
+*.lof
