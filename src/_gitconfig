@@ -35,18 +35,30 @@
 [rerere]
   enabled = true
 [user]
-  name = Sven Strittmatter
-  email = sven.strittmatter@iteratec.de
+  name = Johannes Merkert
+  email = johannes.merkert@iteratec.com
 [alias]
   # SVN like shortcuts.
   ci = commit
   st = status
   co = checkout
+  
+  # Updates your repo by rebasing and shows a log of the updated stuff.
+  up = ! sh -c 'git pull --rebase && \
+    git log \
+      --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
+
+    most-affected-files = ! sh -c 'git log --since=\"90 days ago\" --pretty=format:\"\" --name-only | \
+        grep "[^\\s]" | \
+        sort | \
+        uniq -c | \
+        sort -nr | \
+        head -10'
 
   # Shows the email address used for commits.
   iam = !git config --get user.email
 
-  # Shows a short log about what you did suince one day ago.
+  # Shows a short log about what you did since one day ago.
   daily = ! git log --all \
     --oneline \
     --since '1 day ago' \
@@ -103,18 +115,6 @@
 
   # Shows the name of current branch checked out.
   branchname = rev-parse --abbrev-ref HEAD
-
-  # Updates your repo by rebasing and shows a log of the updated stuff.
-  up = ! sh -c 'git pull --rebase && \
-    git log \
-      --pretty=format:\"%Cgreen%h %Cblue%s %Cred[%an (%cn)] %Creset- (%ai [%ci])\" ORIG_HEAD..'
-
-    most-affected-files = ! sh -c 'git log --since=\"90 days ago\" --pretty=format:\"\" --name-only | \
-        grep "[^\\s]" | \
-        sort | \
-        uniq -c | \
-        sort -nr | \
-        head -10'
 
   # Grep grouped by files with lines.
   # http://travisjeffery.com/b/2012/02/search-a-git-repo-like-a-ninja/
